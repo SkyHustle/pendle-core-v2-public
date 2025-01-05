@@ -25,6 +25,7 @@ async function fetchActiveMarkets() {
     // Add timestamp to the data
     const dataWithTimestamp = {
       timestamp: new Date().toISOString(),
+      totalMarkets: response.data.markets.length,
       data: response.data,
     };
 
