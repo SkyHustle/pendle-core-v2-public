@@ -7,7 +7,6 @@ import {
   MarketInfo,
   findValidNonExpiredMarkets,
   connectToProvider,
-  saveMarketsData,
 } from "./fetch-active-markets";
 
 // Load environment variables from .env file
@@ -38,6 +37,72 @@ function isStablecoinMarket(market: MarketInfo): boolean {
   );
 }
 
+interface FormattedMarketInfo {
+  address: string;
+  sySymbol: string;
+  ptSymbol: string;
+  ytSymbol: string;
+  expiry: string;
+  totalLpSupply: string;
+  timestamp: string;
+  blockNumber: number;
+}
+
+interface FormattedMarketData {
+  source: string;
+  factory: string;
+  fetchTimestamp: string;
+  markets: FormattedMarketInfo[];
+}
+
+function formatMarketData(markets: MarketInfo[]): FormattedMarketData {
+  const formatDate = (timestamp: number) => {
+    return new Date(timestamp * 1000).toLocaleString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZoneName: "short",
+    });
+  };
+
+  const formatLpSupply = (supply: string) => {
+    const formatted = ethers.formatEther(supply);
+    return Number(formatted).toLocaleString("en-US", {
+      maximumFractionDigits: 6,
+      minimumFractionDigits: 2,
+    });
+  };
+
+  const formattedMarkets = markets.map((market) => ({
+    address: market.address,
+    sySymbol: market.sySymbol,
+    ptSymbol: market.ptSymbol,
+    ytSymbol: market.ytSymbol,
+    expiry: formatDate(market.expiry),
+    totalLpSupply: formatLpSupply(market.totalLpSupply),
+    timestamp: formatDate(market.timestamp),
+    blockNumber: market.blockNumber,
+  }));
+
+  const now = Math.floor(Date.now() / 1000);
+  return {
+    source: "on-chain",
+    factory: MARKET_FACTORY_V5,
+    fetchTimestamp: formatDate(now),
+    markets: formattedMarkets,
+  };
+}
+
+async function saveMarketsData(markets: MarketInfo[], outputPath: string) {
+  const formattedData = formatMarketData(markets);
+  const jsonString = JSON.stringify(formattedData, null, 2);
+  require("fs").writeFileSync(outputPath, jsonString);
+  console.log(`\nSaved formatted market data to ${outputPath}`);
+}
+
+// Main function when script is run directly
 async function main() {
   if (!process.env.ETH_RPC_URL) {
     throw new Error(
