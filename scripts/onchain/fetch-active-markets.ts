@@ -7,12 +7,12 @@ import * as path from "path";
 dotenv.config();
 
 // Market Factory address on Ethereum mainnet
-const MARKET_FACTORY_V5 = ethers.getAddress(
+export const MARKET_FACTORY_V5 = ethers.getAddress(
   "0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050",
 );
 
 // ABI for the market factory
-const MARKET_FACTORY_ABI = [
+export const MARKET_FACTORY_ABI = [
   "function createNewMarket(address PT, int256 scalarRoot, int256 initialAnchor, uint80 lnFeeRateRoot) external returns (address market)",
   "function isValidMarket(address market) external view returns (bool)",
   "function getMarketConfig(address market, address router) external view returns (address _treasury, uint80 _overriddenFee, uint8 _reserveFeePercent)",
@@ -25,7 +25,7 @@ const MARKET_FACTORY_ABI = [
 ] as const;
 
 // ABI for the market contract (V3)
-const MARKET_ABI = [
+export const MARKET_ABI = [
   "function readState(address router) external view returns (tuple(int256 totalPt, int256 totalSy, int256 totalLp, address treasury, int256 scalarRoot, uint256 expiry, uint256 lnFeeRateRoot, uint256 reserveFeePercent, uint256 lastLnImpliedRate))",
   "function totalSupply() external view returns (uint256)",
   "function balanceOf(address account) external view returns (uint256)",
@@ -44,7 +44,7 @@ const MARKET_ABI = [
 ];
 
 // ABI for tokens
-const TOKEN_ABI = [
+export const TOKEN_ABI = [
   "function symbol() external view returns (string)",
   "function name() external view returns (string)",
   "function decimals() external view returns (uint8)",
@@ -56,18 +56,25 @@ const TOKEN_ABI = [
   "function transferFrom(address from, address to, uint256 amount) external returns (bool)",
 ];
 
-interface MarketInfo {
+export interface MarketInfo {
   address: string;
   sySymbol: string;
   ptSymbol: string;
   ytSymbol: string;
   expiry: number;
-  totalLpSupply: string; // Changed to string for JSON compatibility
-  timestamp: number; // Added timestamp for when the data was fetched
-  blockNumber: number; // Added block number for reference
+  totalLpSupply: string;
+  timestamp: number;
+  blockNumber: number;
 }
 
-async function findValidNonExpiredMarkets(
+export interface MarketData {
+  source: string;
+  factory: string;
+  fetchTimestamp: number;
+  markets: MarketInfo[];
+}
+
+export async function findValidNonExpiredMarkets(
   marketFactory: ethers.Contract,
   provider: ethers.Provider,
 ): Promise<MarketInfo[]> {
@@ -156,16 +163,40 @@ async function findValidNonExpiredMarkets(
   return validMarkets;
 }
 
-async function main() {
-  // Debug environment variables
-  console.log("Environment variables:");
-  console.log(
-    "ETH_RPC_URL:",
-    process.env.ETH_RPC_URL
-      ? "Set (starts with " + process.env.ETH_RPC_URL.substring(0, 10) + "...)"
-      : "Not set",
-  );
+export async function connectToProvider(
+  rpcUrl: string,
+): Promise<ethers.Provider> {
+  const provider = new ethers.JsonRpcProvider(rpcUrl);
+  try {
+    const blockNumber = await provider.getBlockNumber();
+    console.log("Successfully connected to Ethereum network");
+    console.log("Current block number:", blockNumber, "\n");
+    return provider;
+  } catch (error) {
+    console.error(
+      "Failed to connect to Ethereum network. Please check your RPC URL.",
+    );
+    throw error;
+  }
+}
 
+export async function saveMarketsData(
+  markets: MarketInfo[],
+  outputPath: string,
+) {
+  const outputData: MarketData = {
+    source: "on-chain",
+    factory: MARKET_FACTORY_V5,
+    fetchTimestamp: Math.floor(Date.now() / 1000),
+    markets,
+  };
+
+  fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2));
+  console.log(`\nSaved market data to ${outputPath}`);
+}
+
+// Main function when script is run directly
+async function main() {
   if (!process.env.ETH_RPC_URL) {
     throw new Error(
       "Please set ETH_RPC_URL in your environment variables. You can do this by:\n" +
@@ -174,20 +205,7 @@ async function main() {
     );
   }
 
-  // Connect to Ethereum mainnet
-  const provider = new ethers.JsonRpcProvider(process.env.ETH_RPC_URL);
-
-  try {
-    // Test the connection
-    const blockNumber = await provider.getBlockNumber();
-    console.log("Successfully connected to Ethereum network");
-    console.log("Current block number:", blockNumber, "\n");
-  } catch (error) {
-    console.error(
-      "Failed to connect to Ethereum network. Please check your RPC URL.",
-    );
-    throw error;
-  }
+  const provider = await connectToProvider(process.env.ETH_RPC_URL);
 
   const marketFactory = new ethers.Contract(
     MARKET_FACTORY_V5,
@@ -216,22 +234,20 @@ async function main() {
     );
   });
 
-  // Save to JSON file
-  const outputData = {
-    source: "on-chain",
-    factory: MARKET_FACTORY_V5,
-    fetchTimestamp: Math.floor(Date.now() / 1000),
-    markets,
-  };
-
-  const outputPath = path.join("data", "onchain-active-markets.json");
-  fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2));
-  console.log(`\nSaved market data to ${outputPath}`);
+  const outputPath = path.join(
+    "data",
+    "onchain",
+    "onchain-active-markets.json",
+  );
+  await saveMarketsData(markets, outputPath);
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+// Only run main function if script is run directly
+if (require.main === module) {
+  main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
+    });
+}
