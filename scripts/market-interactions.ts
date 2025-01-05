@@ -5,8 +5,8 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 // Latest Market Factory on Ethereum mainnet
-const MARKET_FACTORY_V5 = ethers.getAddress(
-  "0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050",
+const MARKET_FACTORY_V3 = ethers.getAddress(
+  "0x1A6fCc85557BC4fB7B534ed835a03EF056552D52",
 );
 
 // ABI for the market factory
@@ -54,16 +54,34 @@ const TOKEN_ABI = [
   "function transferFrom(address from, address to, uint256 amount) external returns (bool)",
 ];
 
-async function findFirstValidMarket(
+async function findValidNonExpiredMarkets(
   marketFactory: ethers.Contract,
   provider: ethers.Provider,
-): Promise<string | null> {
-  console.log("Looking for CreateNewMarket events...");
+): Promise<string[]> {
+  console.log("Looking for CreateNewMarket events in the past 181 days...");
+
+  const currentBlock = await provider.getBlockNumber();
+  const currentBlockData = await provider.getBlock(currentBlock);
+  if (!currentBlockData) throw new Error("Could not get current block data");
+
+  const currentTimestamp = currentBlockData.timestamp;
+  const daysInSeconds = 181 * 24 * 60 * 60;
+  const startTimestamp = currentTimestamp - daysInSeconds;
+
+  // Get the approximate block number from 181 days ago (assuming 12s block time)
+  const blocksPerDay = (24 * 60 * 60) / 12;
+  const startBlock = currentBlock - Math.floor(181 * blocksPerDay);
 
   const filter = marketFactory.filters.CreateNewMarket();
-  const events = await marketFactory.queryFilter(filter);
+  const events = await marketFactory.queryFilter(
+    filter,
+    startBlock,
+    currentBlock,
+  );
 
   console.log(`Found ${events.length} market creation events\n`);
+
+  const validMarkets: string[] = [];
 
   for (const event of events) {
     if (!("args" in event) || !event.args) continue;
@@ -74,14 +92,47 @@ async function findFirstValidMarket(
     const isValid = await marketFactory.isValidMarket(marketAddress);
 
     if (isValid) {
-      console.log(`Found valid market: ${marketAddress}\n`);
-      return marketAddress;
+      // Create market contract instance to check expiry
+      const market = new ethers.Contract(marketAddress, MARKET_ABI, provider);
+      const isExpired = await market.isExpired();
+
+      if (!isExpired) {
+        console.log(`Found valid non-expired market: ${marketAddress}`);
+        try {
+          const [syAddress, ptAddress, ytAddress] = await market.readTokens();
+          const sy = new ethers.Contract(syAddress, TOKEN_ABI, provider);
+          const pt = new ethers.Contract(ptAddress, TOKEN_ABI, provider);
+          const yt = new ethers.Contract(ytAddress, TOKEN_ABI, provider);
+
+          const sySymbol = await sy.symbol();
+          const ptSymbol = await pt.symbol();
+          const ytSymbol = await yt.symbol();
+
+          console.log(`Tokens: SY=${sySymbol}, PT=${ptSymbol}, YT=${ytSymbol}`);
+
+          const state = await market.readState(ethers.ZeroAddress);
+          console.log(
+            `Expiry: ${new Date(Number(state.expiry) * 1000).toLocaleString()}`,
+          );
+          console.log(
+            `Total LP Supply: ${ethers.formatEther(
+              await market.totalSupply(),
+            )}\n`,
+          );
+
+          validMarkets.push(marketAddress);
+        } catch (error) {
+          console.log(`Error fetching market details: ${error}\n`);
+        }
+      } else {
+        console.log(`Market is expired\n`);
+      }
     } else {
       console.log(`Market is not valid\n`);
     }
   }
 
-  return null;
+  return validMarkets;
 }
 
 async function main() {
@@ -119,77 +170,23 @@ async function main() {
 
   // Connect to the market factory
   const marketFactory = new ethers.Contract(
-    MARKET_FACTORY_V5,
+    MARKET_FACTORY_V3,
     MARKET_FACTORY_ABI,
     provider,
   );
 
-  // Find first valid market
-  console.log("Searching for a valid market...");
-  const marketAddress = await findFirstValidMarket(marketFactory, provider);
+  // Find all valid non-expired markets
+  console.log("Searching for valid non-expired markets...");
+  const validMarkets = await findValidNonExpiredMarkets(
+    marketFactory,
+    provider,
+  );
 
-  if (!marketAddress) {
-    throw new Error("No valid markets found");
-  }
-
-  // Create market contract instance
-  const market = new ethers.Contract(marketAddress, MARKET_ABI, provider);
-
-  console.log("Fetching market information...\n");
-
-  try {
-    // Get market tokens
-    const [syAddress, ptAddress, ytAddress] = await market.readTokens();
-
-    // Ensure proper checksum for token addresses
-    const syChecksummed = ethers.getAddress(syAddress);
-    const ptChecksummed = ethers.getAddress(ptAddress);
-    const ytChecksummed = ethers.getAddress(ytAddress);
-
-    console.log("Got token addresses:");
-    console.log("SY:", syChecksummed);
-    console.log("PT:", ptChecksummed);
-    console.log("YT:", ytChecksummed);
-    console.log();
-
-    const sy = new ethers.Contract(syChecksummed, TOKEN_ABI, provider);
-    const pt = new ethers.Contract(ptChecksummed, TOKEN_ABI, provider);
-    const yt = new ethers.Contract(ytChecksummed, TOKEN_ABI, provider);
-
-    console.log("Market Tokens:");
-    console.log("SY Symbol:", await sy.symbol());
-    console.log("PT Symbol:", await pt.symbol());
-    console.log("YT Symbol:", await yt.symbol());
-    console.log();
-
-    // Get market state
-    const state = await market.readState(ethers.ZeroAddress);
-    console.log("Market State:");
-    console.log("Total PT:", ethers.formatEther(state.totalPt));
-    console.log("Total SY:", ethers.formatEther(state.totalSy));
-    console.log("Total LP:", ethers.formatEther(state.totalLp));
-    console.log("Treasury:", ethers.getAddress(state.treasury));
-    console.log(
-      "Expiry:",
-      new Date(Number(state.expiry) * 1000).toLocaleString(),
-    );
-    console.log(
-      "Last Implied Rate:",
-      ethers.formatEther(state.lastLnImpliedRate),
-    );
-    console.log();
-
-    // Check if market is expired
-    const isExpired = await market.isExpired();
-    console.log("Market Expired:", isExpired);
-
-    // Get total liquidity
-    const totalSupply = await market.totalSupply();
-    console.log("Total LP Supply:", ethers.formatEther(totalSupply));
-  } catch (error) {
-    console.error("Error fetching market data:", error);
-    throw error;
-  }
+  console.log("\nSummary:");
+  console.log(`Found ${validMarkets.length} valid non-expired markets:`);
+  validMarkets.forEach((market, index) => {
+    console.log(`${index + 1}. ${market}`);
+  });
 }
 
 main()
