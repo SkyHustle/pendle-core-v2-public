@@ -1,7 +1,7 @@
 {
   "source": "on-chain",
   "factory": "0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050",
-  "fetchTimestamp": "Jan 5, 2025, 2:13 PM MST",
+  "fetchTimestamp": "Jan 5, 2025, 3:25 PM MST",
   "market": {
     "address": "0x048680F64d6DFf1748ba6D9a01F578433787e24B",
     "tokens": {
@@ -20,6 +20,7 @@
     },
     "expiry": "Jun 25, 2025, 6:00 PM MDT",
     "timeRemaining": "5 months, 21 days",
+    "createdAt": "Jan 5, 2025, 3:25 PM MST",
     "balances": {
       "sy": "4,500,560.472255",
       "pt": "13,173,181.90657",
@@ -30,10 +31,16 @@
       "scalarRoot": "25.840345",
       "impliedApy": "20.70%",
       "feeAdjustedApy": "4.14%",
+      "ytYieldRate": "20.70%",
       "utilizationRate": "292.70%",
-      "reserveFeePercent": "80%"
+      "reserveFeePercent": "80%",
+      "tvl": "$4,500,560.47",
+      "maturityProgress": "99.15%"
     },
-    "timestamp": "Jan 5, 2025, 2:13 PM MST",
-    "blockNumber": 21560888
+    "rewardTokens": [
+      "0x808507121B80c02388fAd14726482e061B8da827"
+    ],
+    "timestamp": "Jan 5, 2025, 3:25 PM MST",
+    "blockNumber": 21561244
   }
 }
