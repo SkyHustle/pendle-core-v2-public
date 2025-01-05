@@ -310,10 +310,7 @@ async function formatMarketData(
     if (diff <= 0) return "Expired";
 
     const days = Math.floor(diff / (24 * 60 * 60));
-    const months = Math.floor(days / 30);
-    const remainingDays = days % 30;
-
-    return `${months} months, ${remainingDays} days`;
+    return `${days} days`;
   };
 
   // Calculate utilization rate
