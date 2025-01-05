@@ -8,6 +8,7 @@ dotenv.config();
 const MARKET_FACTORIES = {
   V3: ethers.getAddress("0x1A6fCc85557BC4fB7B534ed835a03EF056552D52"),
   V4: ethers.getAddress("0x3d75Bd20C983edb5fD218A1b7e0024F1056c7A2F"),
+  V5: ethers.getAddress("0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050"),
 } as const;
 
 // ABI for the market factory
