@@ -12,7 +12,6 @@ const MARKET_FACTORY_V5 = ethers.getAddress(
 // ABI for the market factory
 const MARKET_FACTORY_ABI = [
   "function createNewMarket(address PT, int256 scalarRoot, int256 initialAnchor, uint80 lnFeeRateRoot) external returns (address market)",
-  "function allMarkets(uint256 index) external view returns (address)",
   "function isValidMarket(address market) external view returns (bool)",
   "function getMarketConfig(address market, address router) external view returns (address _treasury, uint80 _overriddenFee, uint8 _reserveFeePercent)",
   "function treasury() external view returns (address)",
@@ -20,20 +19,24 @@ const MARKET_FACTORY_ABI = [
   "function maxLnFeeRateRoot() external view returns (uint256)",
   "function maxReserveFeePercent() external view returns (uint8)",
   "function minInitialAnchor() external view returns (int256)",
-];
+  "event CreateNewMarket(address indexed market, address indexed PT, int256 scalarRoot, int256 initialAnchor, uint256 lnFeeRateRoot)",
+] as const;
 
-// ABI for the market contract
+// ABI for the market contract (V3)
 const MARKET_ABI = [
   "function readState(address router) external view returns (tuple(int256 totalPt, int256 totalSy, int256 totalLp, address treasury, int256 scalarRoot, uint256 expiry, uint256 lnFeeRateRoot, uint256 reserveFeePercent, uint256 lastLnImpliedRate))",
   "function totalSupply() external view returns (uint256)",
   "function balanceOf(address account) external view returns (uint256)",
   "function isExpired() external view returns (bool)",
   "function readTokens() external view returns (address _SY, address _PT, address _YT)",
-  "function SY() external view returns (address)",
   "function PT() external view returns (address)",
+  "function SY() external view returns (address)",
   "function YT() external view returns (address)",
   "function factory() external view returns (address)",
   "function expiry() external view returns (uint256)",
+  "function scalarRoot() external view returns (int256)",
+  "function initialAnchor() external view returns (int256)",
+  "function lnFeeRateRoot() external view returns (uint80)",
   "function observations(uint256 index) external view returns (uint32 blockTimestamp, uint216 lnImpliedRateCumulative, bool initialized)",
   "function _storage() external view returns (int128 totalPt, int128 totalSy, uint96 lastLnImpliedRate, uint16 observationIndex, uint16 observationCardinality, uint16 observationCardinalityNext)",
 ];
@@ -51,19 +54,34 @@ const TOKEN_ABI = [
   "function transferFrom(address from, address to, uint256 amount) external returns (bool)",
 ];
 
-async function getNumberOfMarkets(
+async function findFirstValidMarket(
   marketFactory: ethers.Contract,
-): Promise<number> {
-  let marketIndex = 0;
-  while (true) {
-    try {
-      await marketFactory.allMarkets(marketIndex);
-      marketIndex++;
-    } catch (error) {
-      break;
+  provider: ethers.Provider,
+): Promise<string | null> {
+  console.log("Looking for CreateNewMarket events...");
+
+  const filter = marketFactory.filters.CreateNewMarket();
+  const events = await marketFactory.queryFilter(filter);
+
+  console.log(`Found ${events.length} market creation events\n`);
+
+  for (const event of events) {
+    if (!("args" in event) || !event.args) continue;
+    const marketAddress = event.args[0];
+    if (!marketAddress) continue;
+
+    console.log(`Checking market: ${marketAddress}`);
+    const isValid = await marketFactory.isValidMarket(marketAddress);
+
+    if (isValid) {
+      console.log(`Found valid market: ${marketAddress}\n`);
+      return marketAddress;
+    } else {
+      console.log(`Market is not valid\n`);
     }
   }
-  return marketIndex;
+
+  return null;
 }
 
 async function main() {
@@ -106,54 +124,22 @@ async function main() {
     provider,
   );
 
-  // Get the number of markets
-  const numMarkets = await getNumberOfMarkets(marketFactory);
-  console.log(`Total number of markets: ${numMarkets}\n`);
+  // Find first valid market
+  console.log("Searching for a valid market...");
+  const marketAddress = await findFirstValidMarket(marketFactory, provider);
 
-  // Find all markets and look for stETH market
-  let marketIndex = 0;
-  let stethMarket: ethers.Contract | undefined;
-
-  console.log("Searching for stETH market...\n");
-
-  while (marketIndex < numMarkets) {
-    try {
-      const marketAddress = await marketFactory.allMarkets(marketIndex);
-      const market = new ethers.Contract(marketAddress, MARKET_ABI, provider);
-
-      // Get the SY token
-      const syAddress = await market.SY();
-      const sy = new ethers.Contract(syAddress, TOKEN_ABI, provider);
-      const sySymbol = await sy.symbol();
-
-      console.log(`Market ${marketIndex}: SY Symbol = ${sySymbol}`);
-
-      if (sySymbol.toLowerCase().includes("steth")) {
-        stethMarket = market;
-        console.log(
-          `Found stETH market at index ${marketIndex}: ${marketAddress}\n`,
-        );
-        break;
-      }
-
-      marketIndex++;
-    } catch (error) {
-      console.error(`Error processing market ${marketIndex}:`, error);
-      marketIndex++;
-    }
+  if (!marketAddress) {
+    throw new Error("No valid markets found");
   }
 
-  if (!stethMarket) {
-    throw new Error("stETH market not found");
-  }
+  // Create market contract instance
+  const market = new ethers.Contract(marketAddress, MARKET_ABI, provider);
 
   console.log("Fetching market information...\n");
 
   try {
     // Get market tokens
-    const syAddress = await stethMarket.SY();
-    const ptAddress = await stethMarket.PT();
-    const ytAddress = await stethMarket.YT();
+    const [syAddress, ptAddress, ytAddress] = await market.readTokens();
 
     // Ensure proper checksum for token addresses
     const syChecksummed = ethers.getAddress(syAddress);
@@ -177,7 +163,7 @@ async function main() {
     console.log();
 
     // Get market state
-    const state = await stethMarket.readState(ethers.ZeroAddress);
+    const state = await market.readState(ethers.ZeroAddress);
     console.log("Market State:");
     console.log("Total PT:", ethers.formatEther(state.totalPt));
     console.log("Total SY:", ethers.formatEther(state.totalSy));
@@ -194,11 +180,11 @@ async function main() {
     console.log();
 
     // Check if market is expired
-    const isExpired = await stethMarket.isExpired();
+    const isExpired = await market.isExpired();
     console.log("Market Expired:", isExpired);
 
     // Get total liquidity
-    const totalSupply = await stethMarket.totalSupply();
+    const totalSupply = await market.totalSupply();
     console.log("Total LP Supply:", ethers.formatEther(totalSupply));
   } catch (error) {
     console.error("Error fetching market data:", error);
