@@ -1,11 +1,12 @@
 {
-  "timestamp": "2025-01-05T18:06:26.750Z",
+  "timestamp": "2025-01-05T18:22:58.482Z",
   "totalMarkets": 47,
   "markets": [
     {
       "address": "0xe6d4986cd935529fc4505d48e926bcd36a58a0f0",
       "name": "apxETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -16,15 +17,16 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.16692666223242242
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
           "usd": "$380,464",
           "acc": "$105"
@@ -36,14 +38,14 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "3.75%",
         "impliedApy": "5.69%",
-        "ytFloatingApy": "-85.71%",
+        "ytFloatingApy": "-85.82%",
         "swapFeeApy": "0.04%",
         "voterApy": "3.21%",
         "ptDiscount": "1.21%",
         "pendleApy": "0.08%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "4.31%",
+        "aggregatedApy": "4.30%",
         "maxBoostedApy": "4.43%",
         "totalPt": "23.64",
         "totalSy": "76.71",
@@ -59,9 +61,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.17",
@@ -72,27 +74,28 @@
       "raw": {
         "address": "0xe6d4986cd935529fc4505d48e926bcd36a58a0f0",
         "name": "apxETH",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 380463.8798560728,
-          "acc": 105.13888094095088
+          "usd": 380464.2400000813,
+          "acc": 105.13898046455807
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.03751559655554604,
+        "underlyingInterestApy": 0.03745580014916805,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.03751559655554604,
-        "impliedApy": 0.056915826787286905,
-        "ytFloatingApy": -0.8571331972234758,
-        "swapFeeApy": 0.00041363720557274775,
-        "voterApy": 0.03210008799548196,
-        "ptDiscount": 0.012096562960041135,
-        "pendleApy": 0.000833340935989069,
+        "underlyingApy": 0.03745580014916805,
+        "impliedApy": 0.056915826788747514,
+        "ytFloatingApy": -0.8582004740060493,
+        "swapFeeApy": 0.00041363706856056837,
+        "voterApy": 0.03205749545129661,
+        "ptDiscount": 0.012094482080540758,
+        "pendleApy": 0.0008344478612569795,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.043071793682760796,
-        "maxBoostedApy": 0.0443218050867444,
+        "aggregatedApy": 0.04302639117865581,
+        "maxBoostedApy": 0.04427806297054128,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -103,9 +106,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.16692666223242242
@@ -121,6 +124,7 @@
       "address": "0xcdd26eb5eb2ce0f203a84553853667ae69ca29ce",
       "name": "sUSDe",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -131,18 +135,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1105.820016551648
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$157,835,931",
-          "acc": "$158,191,114"
+          "usd": "$157,836,229",
+          "acc": "$158,191,829"
         },
         "tradingVolume": {
           "usd": "$95,915,094"
@@ -153,13 +158,13 @@
         "impliedApy": "22.87%",
         "ytFloatingApy": "-96.69%",
         "swapFeeApy": "1.65%",
-        "voterApy": "34.02%",
+        "voterApy": "33.93%",
         "ptDiscount": "4.43%",
         "pendleApy": "1.26%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "24.96%",
-        "maxBoostedApy": "26.84%",
+        "maxBoostedApy": "26.85%",
         "totalPt": "154,836,430.06",
         "totalSy": "8,919,217.34",
         "totalLp": "74,134,425.42",
@@ -174,23 +179,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,105.82",
-            "usdValue": "$5,790"
+            "usdValue": "$5,812"
           }
         ]
       },
       "raw": {
         "address": "0xcdd26eb5eb2ce0f203a84553853667ae69ca29ce",
         "name": "sUSDe",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 157835930.97096357,
-          "acc": 158191114.0822373
+          "usd": 157836229.4057256,
+          "acc": 158191829.01663944
         },
         "tradingVolume": {
           "usd": 95915093.7651509
@@ -198,16 +204,16 @@
         "underlyingInterestApy": 0.10198366598479813,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.10198366598479813,
-        "impliedApy": 0.22872325375645164,
-        "ytFloatingApy": -0.9668697999152936,
-        "swapFeeApy": 0.016451863925603494,
-        "voterApy": 0.3402283515403423,
-        "ptDiscount": 0.04427405017236785,
-        "pendleApy": 0.012569429685677605,
+        "impliedApy": 0.22873012015946714,
+        "ytFloatingApy": -0.966889095929859,
+        "swapFeeApy": 0.016451832569039704,
+        "voterApy": 0.33925793924341646,
+        "ptDiscount": 0.04426960615223774,
+        "pendleApy": 0.0126053594070327,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.24956456174340624,
-        "maxBoostedApy": 0.26841870627192266,
+        "aggregatedApy": 0.24960689880949485,
+        "maxBoostedApy": 0.2685149379200439,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -218,9 +224,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1105.820016551648
@@ -236,6 +242,7 @@
       "address": "0xb451a36c8b6b2eac77ad0737ba732818143a0e25",
       "name": "USDe",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -246,39 +253,40 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 217.2759488279515
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$27,281,763",
-          "acc": "$27,307,364"
+          "usd": "$27,298,287",
+          "acc": "$27,323,841"
         },
         "tradingVolume": {
-          "usd": "$13,669,323"
+          "usd": "$13,701,047"
         },
         "underlyingInterestApy": "0.00%",
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "0.00%",
-        "impliedApy": "25.69%",
+        "impliedApy": "25.48%",
         "ytFloatingApy": "-100.00%",
-        "swapFeeApy": "3.36%",
-        "voterApy": "50.42%",
-        "ptDiscount": "4.90%",
+        "swapFeeApy": "3.34%",
+        "voterApy": "50.25%",
+        "ptDiscount": "4.87%",
         "pendleApy": "1.42%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "29.38%",
-        "maxBoostedApy": "31.51%",
-        "totalPt": "27,509,484.46",
-        "totalSy": "1,146,390.65",
-        "totalLp": "13,341,332.24",
-        "totalActiveSupply": "5,756,498.81",
+        "aggregatedApy": "29.14%",
+        "maxBoostedApy": "31.27%",
+        "totalPt": "27,483,194.32",
+        "totalSy": "1,178,439.14",
+        "totalLp": "13,344,765.58",
+        "totalActiveSupply": "5,757,872.14",
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -289,40 +297,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "217.28",
-            "usdValue": "$1,138"
+            "usdValue": "$1,142"
           }
         ]
       },
       "raw": {
         "address": "0xb451a36c8b6b2eac77ad0737ba732818143a0e25",
         "name": "USDe",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 27281762.838048633,
-          "acc": 27307364.03798152
+          "usd": 27298286.918867636,
+          "acc": 27323840.721186906
         },
         "tradingVolume": {
-          "usd": 13669322.577909574
+          "usd": 13701047.494211236
         },
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.2568522630522412,
+        "impliedApy": 0.2548411273844744,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.03362050149226126,
-        "voterApy": 0.5042000941303296,
-        "ptDiscount": 0.04901985977171297,
-        "pendleApy": 0.014150983960644332,
+        "swapFeeApy": 0.03343667456085697,
+        "voterApy": 0.5024543736358799,
+        "ptDiscount": 0.04867675587911624,
+        "pendleApy": 0.014161482711397434,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.2938408317809031,
-        "maxBoostedApy": 0.3150673077218696,
+        "aggregatedApy": 0.29144834225136995,
+        "maxBoostedApy": 0.3126905663184661,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -333,24 +342,25 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 217.2759488279515
           }
         ],
-        "totalPt": 27509484.460226823,
-        "totalSy": 1146390.6483871338,
-        "totalLp": 13341332.235743834,
-        "totalActiveSupply": 5756498.806428211
+        "totalPt": 27483194.31921997,
+        "totalSy": 1178439.142621922,
+        "totalLp": 13344765.579123268,
+        "totalActiveSupply": 5757872.143779985
       }
     },
     {
       "address": "0x6c06bbfa3b63ed344ceb3312df795edc8d29bdd5",
       "name": "USDe (Karak)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-01-30T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -361,18 +371,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.18389723288186882
         }
       ],
       "formatted": {
+        "expiry": "January 30, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$1,714,601",
-          "acc": "$1,716,210"
+          "usd": "$1,714,612",
+          "acc": "$1,716,217"
         },
         "tradingVolume": {
           "usd": "$6,917"
@@ -404,9 +415,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.18",
@@ -417,10 +428,11 @@
       "raw": {
         "address": "0x6c06bbfa3b63ed344ceb3312df795edc8d29bdd5",
         "name": "USDe (Karak)",
+        "expiry": "2025-01-30T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 1714601.0627126954,
-          "acc": 1716210.0439531023
+          "usd": 1714612.3471447395,
+          "acc": 1716217.3879703172
         },
         "tradingVolume": {
           "usd": 6916.7757991858325
@@ -428,16 +440,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.15792128537022054,
+        "impliedApy": 0.1579212854166645,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.000012513971341165941,
-        "voterApy": 0.021018615338122718,
-        "ptDiscount": 0.009693768754010401,
-        "pendleApy": 0.00020556720817740783,
+        "swapFeeApy": 0.00001251391779200084,
+        "voterApy": 0.02099076183899179,
+        "ptDiscount": 0.00968824343530661,
+        "pendleApy": 0.00020583910287311536,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.12133814622323973,
-        "maxBoostedApy": 0.12164649703550584,
+        "aggregatedApy": 0.12133857557935537,
+        "maxBoostedApy": 0.12164733423366506,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -448,9 +460,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.18389723288186882
@@ -466,6 +478,7 @@
       "address": "0xdbe4d359d4e48087586ec04b93809ba647343548",
       "name": "sUSDe (Karak)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-01-30T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -476,18 +489,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.11809218269828159
         }
       ],
       "formatted": {
+        "expiry": "January 30, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$899,371",
-          "acc": "$901,395"
+          "usd": "$899,374",
+          "acc": "$901,401"
         },
         "tradingVolume": {
           "usd": "$5,655"
@@ -519,9 +533,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.12",
@@ -532,10 +546,11 @@
       "raw": {
         "address": "0xdbe4d359d4e48087586ec04b93809ba647343548",
         "name": "sUSDe (Karak)",
+        "expiry": "2025-01-30T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 899371.4102988058,
-          "acc": 901394.661915057
+          "usd": 899374.4738489871,
+          "acc": 901400.8916384868
         },
         "tradingVolume": {
           "usd": 5655.304216341718
@@ -543,16 +558,16 @@
         "underlyingInterestApy": 0.10198366598479813,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.10198366598479813,
-        "impliedApy": 0.21046123033668884,
-        "ytFloatingApy": -0.9999723590557593,
-        "swapFeeApy": 0.00003419198583931582,
-        "voterApy": 0.018975453378162525,
-        "ptDiscount": 0.012608929688106563,
-        "pendleApy": 0.00018873899316737287,
+        "impliedApy": 0.21046123039993292,
+        "ytFloatingApy": -0.9999725270930485,
+        "swapFeeApy": 0.000034191869372035555,
+        "voterApy": 0.018950263814795,
+        "ptDiscount": 0.012601753366177193,
+        "pendleApy": 0.0001889892299704726,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.20040000582828554,
-        "maxBoostedApy": 0.2006831143180366,
+        "aggregatedApy": 0.20040029103691326,
+        "maxBoostedApy": 0.20068377488186898,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -563,9 +578,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.11809218269828159
@@ -581,6 +596,7 @@
       "address": "0x7e0209ab6fa3c7730603b68799bbe9327dab7e88",
       "name": "rsENA",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -591,21 +607,22 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 40.72827732620524
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$12,060,459",
-          "acc": "$9,716,809"
+          "usd": "$11,925,857",
+          "acc": "$9,716,859"
         },
         "tradingVolume": {
-          "usd": "$398,914"
+          "usd": "$398,475"
         },
         "underlyingInterestApy": "0.00%",
         "underlyingRewardApy": "0.00%",
@@ -613,15 +630,15 @@
         "impliedApy": "53.73%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "1.85%",
-        "voterApy": "68.04%",
+        "voterApy": "66.86%",
         "ptDiscount": "9.02%",
         "pendleApy": "0.47%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "46.72%",
-        "maxBoostedApy": "47.43%",
-        "totalPt": "8,826,503.04",
-        "totalSy": "1,686,545.43",
+        "aggregatedApy": "46.74%",
+        "maxBoostedApy": "47.45%",
+        "totalPt": "8,827,146.36",
+        "totalSy": "1,685,960.27",
         "totalLp": "4,887,044.9",
         "totalActiveSupply": "2,700,199.03",
         "estimatedDailyPoolRewards": [
@@ -634,40 +651,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "40.73",
-            "usdValue": "$213"
+            "usdValue": "$214"
           }
         ]
       },
       "raw": {
         "address": "0x7e0209ab6fa3c7730603b68799bbe9327dab7e88",
         "name": "rsENA",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 12060459.180416713,
-          "acc": 9716808.772975372
+          "usd": 11925856.785625506,
+          "acc": 9716858.64191058
         },
         "tradingVolume": {
-          "usd": 398913.67755742604
+          "usd": 398474.74613248487
         },
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.5372723633583072,
+        "impliedApy": 0.5373434790026468,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.01854049143172909,
-        "voterApy": 0.6804105645487104,
-        "ptDiscount": 0.09021009709037975,
-        "pendleApy": 0.004685860798291709,
+        "swapFeeApy": 0.01850046588673715,
+        "voterApy": 0.6685994416643946,
+        "ptDiscount": 0.0902044620846908,
+        "pendleApy": 0.004745047204871301,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.46724441082645707,
-        "maxBoostedApy": 0.47427320202389467,
+        "aggregatedApy": 0.46735518174550544,
+        "maxBoostedApy": 0.4744727525528124,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -678,16 +696,16 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 40.72827732620524
           }
         ],
-        "totalPt": 8826503.044132652,
-        "totalSy": 1686545.4254224587,
+        "totalPt": 8827146.363486856,
+        "totalSy": 1685960.267884891,
         "totalLp": 4887044.900512683,
         "totalActiveSupply": 2700199.028746417
       }
@@ -696,6 +714,7 @@
       "address": "0x890b6afc834c2a2cc6cb9b6627272ab4ecfd8271",
       "name": "rsUSDe",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -706,18 +725,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 3.9358152602965153
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$8,558,121",
-          "acc": "$8,577,374"
+          "usd": "$8,558,150",
+          "acc": "$8,577,432"
         },
         "tradingVolume": {
           "usd": "$4,633"
@@ -728,7 +748,7 @@
         "impliedApy": "20.81%",
         "ytFloatingApy": "-95.15%",
         "swapFeeApy": "0.12%",
-        "voterApy": "34.72%",
+        "voterApy": "34.67%",
         "ptDiscount": "4.07%",
         "pendleApy": "0.09%",
         "arbApy": "0.00%",
@@ -749,9 +769,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "3.94",
@@ -762,10 +782,11 @@
       "raw": {
         "address": "0x890b6afc834c2a2cc6cb9b6627272ab4ecfd8271",
         "name": "rsUSDe",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 8558121.396128107,
-          "acc": 8577373.990494028
+          "usd": 8558149.772843108,
+          "acc": 8577432.493722068
         },
         "tradingVolume": {
           "usd": 4632.691959952113
@@ -773,16 +794,16 @@
         "underlyingInterestApy": 0.10198366598479813,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.10198366598479813,
-        "impliedApy": 0.20808387899598824,
-        "ytFloatingApy": -0.9514539286111934,
-        "swapFeeApy": 0.0011628446115059532,
-        "voterApy": 0.34715273204093816,
-        "ptDiscount": 0.04070937767618199,
-        "pendleApy": 0.000874490777153802,
+        "impliedApy": 0.2080838790016899,
+        "ytFloatingApy": -0.9514805421516661,
+        "swapFeeApy": 0.0011628407536032892,
+        "voterApy": 0.34669189321049326,
+        "ptDiscount": 0.040702477347396515,
+        "pendleApy": 0.0008756502871170582,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.19940523499481766,
-        "maxBoostedApy": 0.20071697116054837,
+        "aggregatedApy": 0.1994064261835502,
+        "maxBoostedApy": 0.2007199016142258,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -793,9 +814,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 3.9358152602965153
@@ -811,6 +832,7 @@
       "address": "0x70b70ac0445c3ef04e314dfda6caafd825428221",
       "name": "LBTC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -821,21 +843,22 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 721.5235198471543
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$51,928,445",
+          "usd": "$51,919,679",
           "acc": "$532"
         },
         "tradingVolume": {
-          "usd": "$2,051,759"
+          "usd": "$2,041,630"
         },
         "underlyingInterestApy": "0.00%",
         "underlyingRewardApy": "0.00%",
@@ -843,13 +866,13 @@
         "impliedApy": "7.32%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "0.53%",
-        "voterApy": "6.15%",
+        "voterApy": "6.14%",
         "ptDiscount": "1.54%",
-        "pendleApy": "2.54%",
+        "pendleApy": "2.55%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "6.57%",
-        "maxBoostedApy": "10.38%",
+        "maxBoostedApy": "10.39%",
         "totalPt": "258.06",
         "totalSy": "277.78",
         "totalLp": "0",
@@ -864,40 +887,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "721.52",
-            "usdValue": "$3,778"
+            "usdValue": "$3,792"
           }
         ]
       },
       "raw": {
         "address": "0x70b70ac0445c3ef04e314dfda6caafd825428221",
         "name": "LBTC",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 51928445.01197096,
-          "acc": 531.866971463591
+          "usd": 51919678.5430404,
+          "acc": 531.8676548766583
         },
         "tradingVolume": {
-          "usd": 2051759.3134107587
+          "usd": 2041629.581516663
         },
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.07324403478940344,
+        "impliedApy": 0.07324403479129815,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.005302201282219254,
-        "voterApy": 0.061488484468576375,
-        "ptDiscount": 0.015420802192106953,
-        "pendleApy": 0.025414294942890086,
+        "swapFeeApy": 0.005302194451579645,
+        "voterApy": 0.06139641415431919,
+        "ptDiscount": 0.01541815394550261,
+        "pendleApy": 0.025452373619151862,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.06570656117685114,
-        "maxBoostedApy": 0.10382800359118627,
+        "aggregatedApy": 0.0657446821770779,
+        "maxBoostedApy": 0.10392324260580571,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -908,9 +932,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 721.5235198471543
@@ -926,6 +950,7 @@
       "address": "0x977ebf77581f94de969349549ab2108a681e8f4c",
       "name": "USDS Rewards",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -936,9 +961,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.6021278568425376
@@ -953,35 +978,36 @@
             "expiry": null,
             "accentColor": "",
             "price": {
-              "usd": 0.06518397205340669
+              "usd": 0.06511909421756104
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "SKY"
           },
-          "amount": 632.8473049788258
+          "amount": 632.8287891304842
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$631,933",
-          "acc": "$631,743"
+          "usd": "$631,935",
+          "acc": "$631,746"
         },
         "tradingVolume": {
           "usd": "$0"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "13.99%",
-        "underlyingApy": "13.99%",
+        "underlyingRewardApy": "13.97%",
+        "underlyingApy": "13.97%",
         "impliedApy": "14.07%",
-        "ytFloatingApy": "22.69%",
+        "ytFloatingApy": "21.79%",
         "swapFeeApy": "0.08%",
-        "voterApy": "4.88%",
+        "voterApy": "4.87%",
         "ptDiscount": "2.85%",
         "pendleApy": "0.12%",
         "arbApy": "0.00%",
         "lpRewardApy": "1.51%",
         "aggregatedApy": "13.37%",
-        "maxBoostedApy": "15.81%",
+        "maxBoostedApy": "15.80%",
         "totalPt": "539,485.95",
         "totalSy": "107,647.07",
         "totalLp": "319,530.38",
@@ -996,9 +1022,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.6",
@@ -1014,12 +1040,12 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 0.06518397205340669
+                "usd": 0.06511909421756104
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "SKY"
             },
-            "amount": "632.85",
+            "amount": "632.83",
             "usdValue": "$41"
           }
         ]
@@ -1027,27 +1053,28 @@
       "raw": {
         "address": "0x977ebf77581f94de969349549ab2108a681e8f4c",
         "name": "USDS Rewards",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 631932.652034352,
-          "acc": 631743.2680374597
+          "usd": 631935.2780238056,
+          "acc": 631745.8932399302
         },
         "tradingVolume": {
           "usd": 0
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.13991475243242948,
-        "underlyingApy": 0.13991475243242948,
-        "impliedApy": 0.14069353377831106,
-        "ytFloatingApy": 0.22693862583303082,
-        "swapFeeApy": 0.0007610275194596117,
-        "voterApy": 0.04876033733426056,
-        "ptDiscount": 0.02852669007335784,
-        "pendleApy": 0.0011553496272335702,
+        "underlyingRewardApy": 0.13968670134585023,
+        "underlyingApy": 0.13968670134585023,
+        "impliedApy": 0.1406935337820605,
+        "ytFloatingApy": 0.21789671317952264,
+        "swapFeeApy": 0.0007610243558549001,
+        "voterApy": 0.048695608888377054,
+        "ptDiscount": 0.02852182395500602,
+        "pendleApy": 0.0011568805637597482,
         "arbApy": 0,
-        "lpRewardApy": 0.015082521669523053,
-        "aggregatedApy": 0.13371869630241007,
-        "maxBoostedApy": 0.158075503247545,
+        "lpRewardApy": 0.01505787566001377,
+        "aggregatedApy": 0.1336956776911265,
+        "maxBoostedApy": 0.15801781202678677,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1058,9 +1085,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.6021278568425376
@@ -1075,12 +1102,12 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 0.06518397205340669
+                "usd": 0.06511909421756104
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "SKY"
             },
-            "amount": 632.8473049788258
+            "amount": 632.8287891304842
           }
         ],
         "totalPt": 539485.9476515321,
@@ -1093,6 +1120,7 @@
       "address": "0x487e1cef7805cf0225dec3dd0f3044fe0fb70611",
       "name": "sENA",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-04-24T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1103,37 +1131,38 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 226.81883568197952
         }
       ],
       "formatted": {
+        "expiry": "April 24, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$22,688,406",
-          "acc": "$18,425,374"
+          "usd": "$22,440,733",
+          "acc": "$18,430,047"
         },
         "tradingVolume": {
-          "usd": "$704,336"
+          "usd": "$751,021"
         },
         "underlyingInterestApy": "3.63%",
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "3.63%",
-        "impliedApy": "44.83%",
+        "impliedApy": "44.67%",
         "ytFloatingApy": "-99.96%",
-        "swapFeeApy": "1.49%",
-        "voterApy": "22.34%",
-        "ptDiscount": "10.40%",
-        "pendleApy": "1.39%",
+        "swapFeeApy": "1.50%",
+        "voterApy": "22.23%",
+        "ptDiscount": "10.37%",
+        "pendleApy": "1.40%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "36.34%",
-        "maxBoostedApy": "38.42%",
-        "totalPt": "14,892,469.51",
-        "totalSy": "5,060,861.95",
+        "aggregatedApy": "36.17%",
+        "maxBoostedApy": "38.27%",
+        "totalPt": "14,850,077.04",
+        "totalSy": "5,098,710.17",
         "totalLp": "9,435,866.51",
         "totalActiveSupply": "5,215,273.75",
         "estimatedDailyPoolRewards": [
@@ -1146,40 +1175,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "226.82",
-            "usdValue": "$1,188"
+            "usdValue": "$1,192"
           }
         ]
       },
       "raw": {
         "address": "0x487e1cef7805cf0225dec3dd0f3044fe0fb70611",
         "name": "sENA",
+        "expiry": "2025-04-24T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 22688406.152570583,
-          "acc": 18425374.402774636
+          "usd": 22440732.86311837,
+          "acc": 18430047.025317624
         },
         "tradingVolume": {
-          "usd": 704335.9151260301
+          "usd": 751021.2310215617
         },
-        "underlyingInterestApy": 0.036289549119681075,
+        "underlyingInterestApy": 0.03629106155035933,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.036289549119681075,
-        "impliedApy": 0.44830966638016223,
-        "ytFloatingApy": -0.9995880637909422,
-        "swapFeeApy": 0.014916431560877186,
-        "voterApy": 0.22337396543618576,
-        "ptDiscount": 0.10403080392988207,
-        "pendleApy": 0.013867125318167374,
+        "underlyingApy": 0.03629106155035933,
+        "impliedApy": 0.44667632374856225,
+        "ytFloatingApy": -0.9995844026931222,
+        "swapFeeApy": 0.014966021502194282,
+        "voterApy": 0.22226343025849934,
+        "ptDiscount": 0.10371832414602322,
+        "pendleApy": 0.01403880990213368,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.363447739321476,
-        "maxBoostedApy": 0.3842484272987271,
+        "aggregatedApy": 0.36166882510626297,
+        "maxBoostedApy": 0.3827270399594635,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1190,16 +1220,16 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 226.81883568197952
           }
         ],
-        "totalPt": 14892469.514855342,
-        "totalSy": 5060861.954639831,
+        "totalPt": 14850077.040059097,
+        "totalSy": 5098710.17066159,
         "totalLp": 9435866.514039697,
         "totalActiveSupply": 5215273.746841979
       }
@@ -1208,6 +1238,7 @@
       "address": "0x373dc7be84fadebc2e879c98289fc662c6985946",
       "name": "syrupUSDC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-01-30T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1218,29 +1249,30 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 12.39211124525425
         }
       ],
       "formatted": {
+        "expiry": "January 30, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$17,190,410",
-          "acc": "$17,189,552"
+          "usd": "$17,189,559",
+          "acc": "$17,189,629"
         },
         "tradingVolume": {
           "usd": "$99,008"
         },
-        "underlyingInterestApy": "14.76%",
+        "underlyingInterestApy": "14.77%",
         "underlyingRewardApy": "0.00%",
-        "underlyingApy": "14.76%",
+        "underlyingApy": "14.77%",
         "impliedApy": "15.91%",
-        "ytFloatingApy": "-74.48%",
+        "ytFloatingApy": "-74.49%",
         "swapFeeApy": "0.00%",
-        "voterApy": "1.71%",
+        "voterApy": "1.70%",
         "ptDiscount": "0.98%",
         "pendleApy": "0.11%",
         "arbApy": "0.00%",
@@ -1261,9 +1293,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "12.39",
@@ -1274,27 +1306,28 @@
       "raw": {
         "address": "0x373dc7be84fadebc2e879c98289fc662c6985946",
         "name": "syrupUSDC",
+        "expiry": "2025-01-30T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 17190410.485161923,
-          "acc": 17189552.013876047
+          "usd": 17189558.644034524,
+          "acc": 17189629.440191768
         },
         "tradingVolume": {
           "usd": 99007.66320066969
         },
-        "underlyingInterestApy": 0.14764970708225023,
+        "underlyingInterestApy": 0.14765373568362317,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.14764970708225023,
-        "impliedApy": 0.15912492294044767,
-        "ytFloatingApy": -0.7448154642941427,
-        "swapFeeApy": 0.00003647645376081421,
-        "voterApy": 0.01706185341518728,
-        "ptDiscount": 0.009762118924657615,
-        "pendleApy": 0.0011319913212729717,
+        "underlyingApy": 0.14765373568362317,
+        "impliedApy": 0.15912492298726733,
+        "ytFloatingApy": -0.7449376280110432,
+        "swapFeeApy": 0.000036476396227280716,
+        "voterApy": 0.017038332897515465,
+        "ptDiscount": 0.009756554839496667,
+        "pendleApy": 0.0011335521874906768,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.1555418198754124,
-        "maxBoostedApy": 0.15723980685732186,
+        "aggregatedApy": 0.15554505633639648,
+        "maxBoostedApy": 0.1572453846176325,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1305,9 +1338,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 12.39211124525425
@@ -1323,6 +1356,7 @@
       "address": "0x8098b48a1c4e4080b30a43a7ebc0c87b52f17222",
       "name": "pumpBTC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1333,17 +1367,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1061.7297571387305
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$156,465,509",
+          "usd": "$156,438,960",
           "acc": "$1,607"
         },
         "tradingVolume": {
@@ -1376,23 +1411,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,061.73",
-            "usdValue": "$5,559"
+            "usdValue": "$5,580"
           }
         ]
       },
       "raw": {
         "address": "0x8098b48a1c4e4080b30a43a7ebc0c87b52f17222",
         "name": "pumpBTC",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 156465508.9197406,
-          "acc": 1607.099386968018
+          "usd": 156438960.23612472,
+          "acc": 1607.1007626307014
         },
         "tradingVolume": {
           "usd": 44385.68037103726
@@ -1400,16 +1436,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.04894935220107177,
+        "impliedApy": 0.048949352202323215,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.00005131265952318387,
-        "voterApy": 0.004026786207810038,
-        "ptDiscount": 0.010451857624218297,
-        "pendleApy": 0.009759556161581058,
+        "swapFeeApy": 0.00005131261559387923,
+        "voterApy": 0.004020754933678957,
+        "ptDiscount": 0.010450058172234322,
+        "pendleApy": 0.009774187473228295,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.03285247954747057,
-        "maxBoostedApy": 0.04749181378984216,
+        "aggregatedApy": 0.032867132992553304,
+        "maxBoostedApy": 0.047528414202395744,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1420,9 +1456,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1061.7297571387305
@@ -1438,6 +1474,7 @@
       "address": "0x2c71ead7ac9ae53d05f8664e77031d4f9eba064b",
       "name": "eBTC (Corn)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1448,21 +1485,22 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 393.95593916811174
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$40,185,314",
-          "acc": "$412"
+          "usd": "$40,199,454",
+          "acc": "$413"
         },
         "tradingVolume": {
-          "usd": "$4,115,367"
+          "usd": "$4,137,330"
         },
         "underlyingInterestApy": "0.00%",
         "underlyingRewardApy": "0.00%",
@@ -1470,15 +1508,15 @@
         "impliedApy": "7.85%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "0.52%",
-        "voterApy": "10.64%",
+        "voterApy": "10.63%",
         "ptDiscount": "1.65%",
         "pendleApy": "1.74%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "8.05%",
         "maxBoostedApy": "10.66%",
-        "totalPt": "309.17",
-        "totalSy": "108.26",
+        "totalPt": "309.24",
+        "totalSy": "108.39",
         "totalLp": "0",
         "totalActiveSupply": "0",
         "estimatedDailyPoolRewards": [
@@ -1491,40 +1529,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "393.96",
-            "usdValue": "$2,063"
+            "usdValue": "$2,071"
           }
         ]
       },
       "raw": {
         "address": "0x2c71ead7ac9ae53d05f8664e77031d4f9eba064b",
         "name": "eBTC (Corn)",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 40185313.95391063,
-          "acc": 412.33156333055183
+          "usd": 40199454.0709692,
+          "acc": 412.5389427053204
         },
         "tradingVolume": {
-          "usd": 4115367.4657792896
+          "usd": 4137330.305652585
         },
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.07851267077476543,
+        "impliedApy": 0.07849223641221448,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.005190556086114739,
-        "voterApy": 0.10636182900126447,
-        "ptDiscount": 0.016480293588797323,
-        "pendleApy": 0.017407966519177084,
+        "swapFeeApy": 0.005189417924896134,
+        "voterApy": 0.10627061988884093,
+        "ptDiscount": 0.016473368592657023,
+        "pendleApy": 0.017425612224605508,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.0804971500107296,
-        "maxBoostedApy": 0.10660909978949523,
+        "aggregatedApy": 0.08048398125027828,
+        "maxBoostedApy": 0.10662239958718654,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1535,24 +1574,25 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 393.95593916811174
           }
         ],
-        "totalPt": 309.16621673,
-        "totalSy": 108.26049662,
-        "totalLp": 2.0716452022e-8,
-        "totalActiveSupply": 8.944462645e-9
+        "totalPt": 309.24147396,
+        "totalSy": 108.39171753,
+        "totalLp": 2.0726763076e-8,
+        "totalActiveSupply": 8.948587066e-9
       }
     },
     {
       "address": "0xafdc922d0059147486cc1f0f32e3a2354b0d35cc",
       "name": "USD0++",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1563,35 +1603,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1199.6480129678828
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$50,112,629",
-          "acc": "$50,104,234"
+          "usd": "$50,113,763",
+          "acc": "$50,103,839"
         },
         "tradingVolume": {
           "usd": "$7,605,445"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "37.48%",
-        "underlyingApy": "37.48%",
-        "impliedApy": "22.42%",
-        "ytFloatingApy": "1490.65%",
+        "underlyingRewardApy": "36.84%",
+        "underlyingApy": "36.84%",
+        "impliedApy": "22.43%",
+        "ytFloatingApy": "1368.76%",
         "swapFeeApy": "1.73%",
-        "voterApy": "9.09%",
+        "voterApy": "9.08%",
         "ptDiscount": "4.35%",
-        "pendleApy": "3.62%",
+        "pendleApy": "3.63%",
         "arbApy": "0.00%",
-        "lpRewardApy": "5.58%",
-        "aggregatedApy": "29.12%",
-        "maxBoostedApy": "42.92%",
+        "lpRewardApy": "5.48%",
+        "aggregatedApy": "29.04%",
+        "maxBoostedApy": "42.70%",
         "totalPt": "42,499,986.54",
         "totalSy": "9,453,110.38",
         "totalLp": "25,305,122.78",
@@ -1606,40 +1647,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,199.65",
-            "usdValue": "$6,282"
+            "usdValue": "$6,305"
           }
         ]
       },
       "raw": {
         "address": "0xafdc922d0059147486cc1f0f32e3a2354b0d35cc",
         "name": "USD0++",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 50112628.723124206,
-          "acc": 50104234.25971633
+          "usd": 50113763.17677683,
+          "acc": 50103839.109364435
         },
         "tradingVolume": {
           "usd": 7605445.199199207
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.37478044627935997,
-        "underlyingApy": 0.37478044627935997,
-        "impliedApy": 0.22421387053430375,
-        "ytFloatingApy": 14.906535274464623,
-        "swapFeeApy": 0.01726689658179792,
-        "voterApy": 0.09088128750161618,
-        "ptDiscount": 0.04350266467285868,
-        "pendleApy": 0.03620862353495453,
+        "underlyingRewardApy": 0.3683732318760403,
+        "underlyingApy": 0.3683732318760403,
+        "impliedApy": 0.22431087982133202,
+        "ytFloatingApy": 13.687620758330898,
+        "swapFeeApy": 0.01726703390582829,
+        "voterApy": 0.09076341473181053,
+        "ptDiscount": 0.04351196233114152,
+        "pendleApy": 0.036255932940173256,
         "arbApy": 0,
-        "lpRewardApy": 0.055800224224233856,
-        "aggregatedApy": 0.29118743226929233,
-        "maxBoostedApy": 0.42920070390807485,
+        "lpRewardApy": 0.05484670092325598,
+        "aggregatedApy": 0.2903597285839257,
+        "maxBoostedApy": 0.42701367937906953,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1650,9 +1692,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1199.6480129678828
@@ -1668,6 +1710,7 @@
       "address": "0x07c5b1f5265591a8e0e541466654b07dd2d1a6fd",
       "name": "eEIGEN",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1678,18 +1721,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 2.5161883306090562
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$2,348,698",
-          "acc": "$587,089"
+          "usd": "$2,346,386",
+          "acc": "$587,090"
         },
         "tradingVolume": {
           "usd": "$819"
@@ -1700,7 +1744,7 @@
         "impliedApy": "11.14%",
         "ytFloatingApy": "-99.85%",
         "swapFeeApy": "0.02%",
-        "voterApy": "4.84%",
+        "voterApy": "4.83%",
         "ptDiscount": "2.29%",
         "pendleApy": "0.17%",
         "arbApy": "0.00%",
@@ -1721,9 +1765,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "2.52",
@@ -1734,10 +1778,11 @@
       "raw": {
         "address": "0x07c5b1f5265591a8e0e541466654b07dd2d1a6fd",
         "name": "eEIGEN",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 2348697.991640978,
-          "acc": 587089.2188165734
+          "usd": 2346385.5328094377,
+          "acc": 587090.2883940366
         },
         "tradingVolume": {
           "usd": 819.3568259196068
@@ -1745,16 +1790,16 @@
         "underlyingInterestApy": 0.026130522155240143,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.026130522155240143,
-        "impliedApy": 0.11137518856154371,
-        "ytFloatingApy": -0.998471834759459,
-        "swapFeeApy": 0.0001983650900936329,
-        "voterApy": 0.04842540077053873,
-        "ptDiscount": 0.022949292684623313,
-        "pendleApy": 0.0016608611360938628,
+        "impliedApy": 0.11137518856447293,
+        "ytFloatingApy": -0.9984735662378404,
+        "swapFeeApy": 0.0001983647286727397,
+        "voterApy": 0.048313413997213936,
+        "ptDiscount": 0.02294536669731273,
+        "pendleApy": 0.0016647078514978395,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.06663922042283552,
-        "maxBoostedApy": 0.06913051212697631,
+        "aggregatedApy": 0.06664315166657148,
+        "maxBoostedApy": 0.06914021344381822,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1765,9 +1810,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 2.5161883306090562
@@ -1783,6 +1828,7 @@
       "address": "0xff81180a7f949ba1f940eae6aa3b3ceb890b1912",
       "name": "stkGHO",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-04-24T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1793,9 +1839,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 12.08259819158809
@@ -1810,16 +1856,17 @@
             "price": {
               "usd": 340.89229
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "AAVE"
           },
-          "amount": 0.49922870559051075
+          "amount": 0.49920456459822865
         }
       ],
       "formatted": {
+        "expiry": "April 24, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$1,845,667",
-          "acc": "$1,847,203"
+          "usd": "$1,845,675",
+          "acc": "$1,847,211"
         },
         "tradingVolume": {
           "usd": "$0"
@@ -1828,9 +1875,9 @@
         "underlyingRewardApy": "24.30%",
         "underlyingApy": "24.30%",
         "impliedApy": "16.50%",
-        "ytFloatingApy": "366.44%",
+        "ytFloatingApy": "366.49%",
         "swapFeeApy": "0.68%",
-        "voterApy": "6.49%",
+        "voterApy": "6.48%",
         "ptDiscount": "4.43%",
         "pendleApy": "0.90%",
         "arbApy": "0.00%",
@@ -1851,13 +1898,13 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "12.08",
-            "usdValue": "$63"
+            "usdValue": "$64"
           },
           {
             "asset": {
@@ -1869,7 +1916,7 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
             "amount": "0.5",
@@ -1880,27 +1927,28 @@
       "raw": {
         "address": "0xff81180a7f949ba1f940eae6aa3b3ceb890b1912",
         "name": "stkGHO",
+        "expiry": "2025-04-24T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 1845667.0735297112,
-          "acc": 1847203.152255032
+          "usd": 1845674.9170263738,
+          "acc": 1847211.0022795394
         },
         "tradingVolume": {
           "usd": 0
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.2430166443505507,
-        "underlyingApy": 0.2430166443505507,
-        "impliedApy": 0.16498340358129937,
-        "ytFloatingApy": 3.6644226388245116,
-        "swapFeeApy": 0.006825247768498688,
-        "voterApy": 0.06486046986839367,
-        "ptDiscount": 0.04427828615273566,
-        "pendleApy": 0.00896833570348836,
+        "underlyingRewardApy": 0.24301058653464494,
+        "underlyingApy": 0.24301058653464494,
+        "impliedApy": 0.16498340358374075,
+        "ytFloatingApy": 3.6649069379761716,
+        "swapFeeApy": 0.006825218666625776,
+        "voterApy": 0.06477436879437781,
+        "ptDiscount": 0.04427273266520615,
+        "pendleApy": 0.008980218665252285,
         "arbApy": 0,
-        "lpRewardApy": 0.04666486257684775,
-        "aggregatedApy": 0.18311815199403408,
-        "maxBoostedApy": 0.2665679494145382,
+        "lpRewardApy": 0.0466635010299297,
+        "aggregatedApy": 0.18312883266957664,
+        "maxBoostedApy": 0.2665944122123496,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -1911,9 +1959,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 12.08259819158809
@@ -1928,10 +1976,10 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
-            "amount": 0.49922870559051075
+            "amount": 0.49920456459822865
           }
         ],
         "totalPt": 1413530.5905763668,
@@ -1944,6 +1992,7 @@
       "address": "0xfd482179ddee989c45eab19991852f80ff31457a",
       "name": "rsETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -1954,17 +2003,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 47.96289742019152
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$8,949,339",
+          "usd": "$8,940,660",
           "acc": "$2,473"
         },
         "tradingVolume": {
@@ -1976,7 +2026,7 @@
         "impliedApy": "4.04%",
         "ytFloatingApy": "-52.82%",
         "swapFeeApy": "0.14%",
-        "voterApy": "2.83%",
+        "voterApy": "2.80%",
         "ptDiscount": "1.84%",
         "pendleApy": "0.96%",
         "arbApy": "0.00%",
@@ -1997,23 +2047,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "47.96",
-            "usdValue": "$251"
+            "usdValue": "$252"
           }
         ]
       },
       "raw": {
         "address": "0xfd482179ddee989c45eab19991852f80ff31457a",
         "name": "rsETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 8949339.242318297,
-          "acc": 2472.7046547864156
+          "usd": 8940660.069299212,
+          "acc": 2472.706040512408
         },
         "tradingVolume": {
           "usd": 350419.7503413662
@@ -2021,16 +2072,16 @@
         "underlyingInterestApy": 0.028680438289150123,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.028680438289150123,
-        "impliedApy": 0.040439236394845146,
-        "ytFloatingApy": -0.528159165045969,
-        "swapFeeApy": 0.001365490367969624,
-        "voterApy": 0.028261766481588766,
-        "ptDiscount": 0.01842755768470683,
-        "pendleApy": 0.009586974827454985,
+        "impliedApy": 0.04043923639507141,
+        "ytFloatingApy": -0.5281892085824653,
+        "swapFeeApy": 0.00136280268972655,
+        "voterApy": 0.02797969237018136,
+        "ptDiscount": 0.01842607699709864,
+        "pendleApy": 0.009609037231681088,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.04400134942638172,
-        "maxBoostedApy": 0.05838181166756419,
+        "aggregatedApy": 0.0440207282940665,
+        "maxBoostedApy": 0.05843428414158813,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2041,9 +2092,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 47.96289742019152
@@ -2059,6 +2110,7 @@
       "address": "0xf4cf59259d007a96c641b41621ab52c93b9691b1",
       "name": "eETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2069,17 +2121,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 160.0182288975251
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$14,961,332",
+          "usd": "$14,946,820",
           "acc": "$4,129"
         },
         "tradingVolume": {
@@ -2091,13 +2144,13 @@
         "impliedApy": "3.54%",
         "ytFloatingApy": "33.11%",
         "swapFeeApy": "0.07%",
-        "voterApy": "3.46%",
+        "voterApy": "3.45%",
         "ptDiscount": "1.62%",
-        "pendleApy": "1.68%",
+        "pendleApy": "1.69%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.75%",
-        "aggregatedApy": "5.52%",
-        "maxBoostedApy": "9.17%",
+        "aggregatedApy": "5.53%",
+        "maxBoostedApy": "9.18%",
         "totalPt": "1,252.52",
         "totalSy": "2,740.93",
         "totalLp": "2,024.13",
@@ -2112,23 +2165,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "160.02",
-            "usdValue": "$838"
+            "usdValue": "$841"
           }
         ]
       },
       "raw": {
         "address": "0xf4cf59259d007a96c641b41621ab52c93b9691b1",
         "name": "eETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 14961332.475529876,
-          "acc": 4129.168303893322
+          "usd": 14946820.334606523,
+          "acc": 4129.169936355973
         },
         "tradingVolume": {
           "usd": 539070.1333886097
@@ -2136,16 +2190,16 @@
         "underlyingInterestApy": 0.027865144968612476,
         "underlyingRewardApy": 0.013050994875671164,
         "underlyingApy": 0.04091613984428364,
-        "impliedApy": 0.03542898464886601,
-        "ytFloatingApy": 0.33105611940160173,
-        "swapFeeApy": 0.0007481541962863769,
-        "voterApy": 0.03458282181357157,
-        "ptDiscount": 0.016201999057642746,
-        "pendleApy": 0.01683190625859588,
+        "impliedApy": 0.035428984649063855,
+        "ytFloatingApy": 0.3310841094709167,
+        "swapFeeApy": 0.0007481539004010607,
+        "voterApy": 0.03450340012165449,
+        "ptDiscount": 0.016200695718477043,
+        "pendleApy": 0.016870644131907208,
         "arbApy": 0,
-        "lpRewardApy": 0.007518094365163907,
-        "aggregatedApy": 0.05522050723114965,
-        "maxBoostedApy": 0.09174550816678934,
+        "lpRewardApy": 0.007518091392893828,
+        "aggregatedApy": 0.05525924393433566,
+        "maxBoostedApy": 0.09184234722153721,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2156,9 +2210,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 160.0182288975251
@@ -2174,6 +2228,7 @@
       "address": "0x98ffefd1a51d322c8def6d0ba183e71547216f7f",
       "name": "eBTC (Zerolend)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2184,9 +2239,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 108.6622667625964
@@ -2203,25 +2258,26 @@
             "price": {
               "usd": 0
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "ZERO"
           },
-          "amount": 2921.5702123787632
+          "amount": 2922.779569060344
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$7,079,300",
+          "usd": "$7,078,241",
           "acc": "$73"
         },
         "tradingVolume": {
           "usd": "$0"
         },
-        "underlyingInterestApy": "1.24%",
+        "underlyingInterestApy": "1.25%",
         "underlyingRewardApy": "0.00%",
-        "underlyingApy": "1.24%",
+        "underlyingApy": "1.25%",
         "impliedApy": "6.51%",
-        "ytFloatingApy": "-99.95%",
+        "ytFloatingApy": "-99.94%",
         "swapFeeApy": "0.04%",
         "voterApy": "0.39%",
         "ptDiscount": "1.38%",
@@ -2229,7 +2285,7 @@
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "5.57%",
-        "maxBoostedApy": "8.07%",
+        "maxBoostedApy": "8.08%",
         "totalPt": "36.54",
         "totalSy": "36.44",
         "totalLp": "0",
@@ -2244,13 +2300,13 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "108.66",
-            "usdValue": "$569"
+            "usdValue": "$571"
           },
           {
             "asset": {
@@ -2264,10 +2320,10 @@
               "price": {
                 "usd": 0
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "ZERO"
             },
-            "amount": "2,921.57",
+            "amount": "2,922.78",
             "usdValue": "$0"
           }
         ]
@@ -2275,27 +2331,28 @@
       "raw": {
         "address": "0x98ffefd1a51d322c8def6d0ba183e71547216f7f",
         "name": "eBTC (Zerolend)",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 7079299.544632332,
-          "acc": 72.63894097907003
+          "usd": 7078241.3714396665,
+          "acc": 72.63905142670946
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.01244216303166823,
+        "underlyingInterestApy": 0.01246384833221259,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.01244216303166823,
-        "impliedApy": 0.06508831739901622,
-        "ytFloatingApy": -0.9994528712178598,
-        "swapFeeApy": 0.00040271920396728333,
-        "voterApy": 0.0038873600934835927,
-        "ptDiscount": 0.01376816085419219,
-        "pendleApy": 0.016684765276555644,
+        "underlyingApy": 0.01246384833221259,
+        "impliedApy": 0.06508831740069199,
+        "ytFloatingApy": -0.9994492608951331,
+        "swapFeeApy": 0.00040271885533060825,
+        "voterApy": 0.0038816160461458186,
+        "ptDiscount": 0.013765794431070733,
+        "pendleApy": 0.016709441066584327,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.05565037588327937,
-        "maxBoostedApy": 0.08067752379811283,
+        "aggregatedApy": 0.055686000274112114,
+        "maxBoostedApy": 0.0807501618739886,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2306,9 +2363,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 108.6622667625964
@@ -2325,10 +2382,10 @@
               "price": {
                 "usd": 0
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "ZERO"
             },
-            "amount": 2921.5702123787632
+            "amount": 2922.779569060344
           }
         ],
         "totalPt": 36.54341374,
@@ -2341,6 +2398,7 @@
       "address": "0xbe8549a20257917a0a9ef8911daf18190a8842a4",
       "name": "agETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2351,35 +2409,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 87.47526909954667
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$13,417,828",
+          "usd": "$13,404,812",
           "acc": "$3,713"
         },
         "tradingVolume": {
           "usd": "$190,981"
         },
-        "underlyingInterestApy": "3.99%",
+        "underlyingInterestApy": "4.05%",
         "underlyingRewardApy": "0.00%",
-        "underlyingApy": "3.99%",
+        "underlyingApy": "4.05%",
         "impliedApy": "4.65%",
-        "ytFloatingApy": "-28.97%",
+        "ytFloatingApy": "-26.51%",
         "swapFeeApy": "0.55%",
-        "voterApy": "10.12%",
+        "voterApy": "10.09%",
         "ptDiscount": "2.11%",
         "pendleApy": "1.17%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "5.85%",
-        "maxBoostedApy": "7.61%",
+        "aggregatedApy": "5.91%",
+        "maxBoostedApy": "7.67%",
         "totalPt": "820.84",
         "totalSy": "2,829.04",
         "totalLp": "1,852.33",
@@ -2394,40 +2453,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "87.48",
-            "usdValue": "$458"
+            "usdValue": "$460"
           }
         ]
       },
       "raw": {
         "address": "0xbe8549a20257917a0a9ef8911daf18190a8842a4",
         "name": "agETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 13417827.76166227,
-          "acc": 3713.18873913888
+          "usd": 13404812.499898706,
+          "acc": 3713.19012843596
         },
         "tradingVolume": {
           "usd": 190981.26776915867
         },
-        "underlyingInterestApy": 0.03988844895827315,
+        "underlyingInterestApy": 0.040537801277438223,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.03988844895827315,
-        "impliedApy": 0.04648621156693178,
-        "ytFloatingApy": -0.2897368292199729,
-        "swapFeeApy": 0.005524173778592267,
-        "voterApy": 0.10115328722939053,
-        "ptDiscount": 0.02109275114934661,
-        "pendleApy": 0.011695939502027838,
+        "underlyingApy": 0.040537801277438223,
+        "impliedApy": 0.04648621156719246,
+        "ytFloatingApy": -0.265148270783945,
+        "swapFeeApy": 0.005524171706116299,
+        "voterApy": 0.1009209821486183,
+        "ptDiscount": 0.021091058618591618,
+        "pendleApy": 0.011722857427916573,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.05853630431679817,
-        "maxBoostedApy": 0.07608021356983993,
+        "aggregatedApy": 0.059072055744892896,
+        "maxBoostedApy": 0.07665634188676776,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2438,9 +2498,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 87.47526909954667
@@ -2456,6 +2516,7 @@
       "address": "0xbba9baaa6b3107182147a12177e0f1ec46b8b072",
       "name": "uniETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2466,17 +2527,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 121.23391191089146
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$4,206,863",
+          "usd": "$4,202,782",
           "acc": "$1,162"
         },
         "tradingVolume": {
@@ -2490,11 +2552,11 @@
         "swapFeeApy": "0.05%",
         "voterApy": "0.29%",
         "ptDiscount": "1.75%",
-        "pendleApy": "4.91%",
+        "pendleApy": "4.92%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "7.22%",
-        "maxBoostedApy": "14.59%",
+        "aggregatedApy": "7.23%",
+        "maxBoostedApy": "14.62%",
         "totalPt": "196.19",
         "totalSy": "893.13",
         "totalLp": "563.19",
@@ -2509,23 +2571,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "121.23",
-            "usdValue": "$635"
+            "usdValue": "$637"
           }
         ]
       },
       "raw": {
         "address": "0xbba9baaa6b3107182147a12177e0f1ec46b8b072",
         "name": "uniETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 4206862.903634846,
-          "acc": 1161.6170347484444
+          "usd": 4202781.680854986,
+          "acc": 1161.6173102963903
         },
         "tradingVolume": {
           "usd": 0
@@ -2533,16 +2596,16 @@
         "underlyingInterestApy": 0.019529157476291026,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.019529157476291026,
-        "impliedApy": 0.03828010912317348,
-        "ytFloatingApy": -0.7657708075248609,
-        "swapFeeApy": 0.0004953711796480409,
-        "voterApy": 0.002885761051825764,
-        "ptDiscount": 0.017470406048079035,
-        "pendleApy": 0.04909362544188161,
+        "impliedApy": 0.03828010912338686,
+        "ytFloatingApy": -0.7657989209407907,
+        "swapFeeApy": 0.0004953710621085072,
+        "voterApy": 0.0028791337145182435,
+        "ptDiscount": 0.01746900158306619,
+        "pendleApy": 0.04920661998867844,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.07222981480058924,
-        "maxBoostedApy": 0.14587025296341166,
+        "aggregatedApy": 0.07234281293968761,
+        "maxBoostedApy": 0.14615274292270528,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2553,9 +2616,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 121.23391191089146
@@ -2571,6 +2634,7 @@
       "address": "0x58612beb0e8a126735b19bb222cbc7fc2c162d2a",
       "name": "pufETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2581,17 +2645,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 10.00342231304014
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$26,379,013",
+          "usd": "$26,373,459",
           "acc": "$7,326"
         },
         "tradingVolume": {
@@ -2603,7 +2668,7 @@
         "impliedApy": "4.56%",
         "ytFloatingApy": "-95.31%",
         "swapFeeApy": "0.23%",
-        "voterApy": "65.33%",
+        "voterApy": "65.23%",
         "ptDiscount": "2.07%",
         "pendleApy": "0.07%",
         "arbApy": "0.00%",
@@ -2624,40 +2689,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "10",
-            "usdValue": "$52"
+            "usdValue": "$53"
           }
         ]
       },
       "raw": {
         "address": "0x58612beb0e8a126735b19bb222cbc7fc2c162d2a",
         "name": "pufETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 26379013.139217936,
-          "acc": 7325.918511461755
+          "usd": 26373459.145401955,
+          "acc": 7325.92187824016
         },
         "tradingVolume": {
           "usd": 46307.58626169462
         },
-        "underlyingInterestApy": 0.010844992287643906,
+        "underlyingInterestApy": 0.01084496219657849,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.010844992287643906,
-        "impliedApy": 0.04555198413614803,
-        "ytFloatingApy": -0.9531139759241946,
-        "swapFeeApy": 0.0023388131555515113,
-        "voterApy": 0.653314861390582,
-        "ptDiscount": 0.02068247170117865,
-        "pendleApy": 0.000704803601101766,
+        "underlyingApy": 0.01084496219657849,
+        "impliedApy": 0.045551984136403156,
+        "ytFloatingApy": -0.9531259929497379,
+        "swapFeeApy": 0.002338812079468733,
+        "voterApy": 0.6523099280285851,
+        "ptDiscount": 0.020680811743241656,
+        "pendleApy": 0.0007058890805781723,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.023298744342363717,
-        "maxBoostedApy": 0.024355949744016364,
+        "aggregatedApy": 0.023299818439078402,
+        "maxBoostedApy": 0.024358652059945658,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2668,9 +2734,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 10.00342231304014
@@ -2686,6 +2752,7 @@
       "address": "0xb162b764044697cf03617c2efbcb1f42e31e4766",
       "name": "sUSDe",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-05-29T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2696,21 +2763,22 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1387.9276388819317
         }
       ],
       "formatted": {
+        "expiry": "May 29, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$147,781,974",
-          "acc": "$148,114,428"
+          "usd": "$147,797,518",
+          "acc": "$148,130,526"
         },
         "tradingVolume": {
-          "usd": "$8,865,534"
+          "usd": "$8,852,273"
         },
         "underlyingInterestApy": "10.20%",
         "underlyingRewardApy": "0.00%",
@@ -2718,17 +2786,17 @@
         "impliedApy": "19.34%",
         "ytFloatingApy": "-76.95%",
         "swapFeeApy": "0.43%",
-        "voterApy": "9.92%",
+        "voterApy": "9.91%",
         "ptDiscount": "6.70%",
         "pendleApy": "1.69%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "16.85%",
-        "maxBoostedApy": "19.38%",
+        "maxBoostedApy": "19.39%",
         "totalPt": "78,670,706.76",
-        "totalSy": "65,271,271.67",
-        "totalLp": "71,182,080.26",
-        "totalActiveSupply": "30,354,195.65",
+        "totalSy": "65,284,503.67",
+        "totalLp": "71,189,359.05",
+        "totalActiveSupply": "30,357,107.17",
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2739,40 +2807,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,387.93",
-            "usdValue": "$7,267"
+            "usdValue": "$7,295"
           }
         ]
       },
       "raw": {
         "address": "0xb162b764044697cf03617c2efbcb1f42e31e4766",
         "name": "sUSDe",
+        "expiry": "2025-05-29T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 147781973.84543216,
-          "acc": 148114428.39536744
+          "usd": 147797517.67768136,
+          "acc": 148130526.3718065
         },
         "tradingVolume": {
-          "usd": 8865534.342584401
+          "usd": 8852273.473407522
         },
         "underlyingInterestApy": 0.10198366598479813,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.10198366598479813,
-        "impliedApy": 0.19336153399473321,
-        "ytFloatingApy": -0.7694552116904887,
-        "swapFeeApy": 0.004338654700330569,
-        "voterApy": 0.09924918908555465,
-        "ptDiscount": 0.06702523408674954,
-        "pendleApy": 0.016885111801084075,
+        "impliedApy": 0.19335343249148007,
+        "ytFloatingApy": -0.7694692695358433,
+        "swapFeeApy": 0.004338617394416655,
+        "voterApy": 0.09914094186919313,
+        "ptDiscount": 0.06701647279175005,
+        "pendleApy": 0.016905885241569926,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.16848953708248088,
-        "maxBoostedApy": 0.193817204784107,
+        "aggregatedApy": 0.16850176311859016,
+        "maxBoostedApy": 0.19386059098094505,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2783,24 +2852,25 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1387.9276388819317
           }
         ],
         "totalPt": 78670706.75772361,
-        "totalSy": 65271271.673363216,
-        "totalLp": 71182080.25750537,
-        "totalActiveSupply": 30354195.64920274
+        "totalSy": 65284503.67162597,
+        "totalLp": 71189359.05348195,
+        "totalActiveSupply": 30357107.167593375
       }
     },
     {
       "address": "0xfd5cf95e8b886ace955057ca4dc69466e793fbbe",
       "name": "rswETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2811,17 +2881,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 405.9093968119618
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$14,311,993",
+          "usd": "$14,298,108",
           "acc": "$3,963"
         },
         "tradingVolume": {
@@ -2831,15 +2902,15 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "4.84%",
         "impliedApy": "3.59%",
-        "ytFloatingApy": "82.31%",
+        "ytFloatingApy": "82.32%",
         "swapFeeApy": "0.17%",
-        "voterApy": "0.76%",
+        "voterApy": "0.75%",
         "ptDiscount": "1.64%",
-        "pendleApy": "4.27%",
+        "pendleApy": "4.28%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "9.09%",
-        "maxBoostedApy": "15.50%",
+        "aggregatedApy": "9.10%",
+        "maxBoostedApy": "15.53%",
         "totalPt": "613.47",
         "totalSy": "3,263.11",
         "totalLp": "1,963.75",
@@ -2854,23 +2925,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "405.91",
-            "usdValue": "$2,125"
+            "usdValue": "$2,133"
           }
         ]
       },
       "raw": {
         "address": "0xfd5cf95e8b886ace955057ca4dc69466e793fbbe",
         "name": "rswETH",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 14311992.919634573,
-          "acc": 3963.432777585479
+          "usd": 14298107.891575718,
+          "acc": 3963.433587423776
         },
         "tradingVolume": {
           "usd": 85738.69849026646
@@ -2878,16 +2950,16 @@
         "underlyingInterestApy": 0.04840662501121651,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.04840662501121651,
-        "impliedApy": 0.0359003878767441,
-        "ytFloatingApy": 0.8231124053224605,
-        "swapFeeApy": 0.0016598065468271805,
-        "voterApy": 0.007595284221817632,
-        "ptDiscount": 0.016412070563573966,
-        "pendleApy": 0.04274148138489788,
+        "impliedApy": 0.035900387876944384,
+        "ytFloatingApy": 0.8231951030044691,
+        "swapFeeApy": 0.001652084889550709,
+        "voterApy": 0.007507998684210683,
+        "ptDiscount": 0.016410750466941515,
+        "pendleApy": 0.04283985716044333,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.09090393926469391,
-        "maxBoostedApy": 0.15501616134204074,
+        "aggregatedApy": 0.09099459121665987,
+        "maxBoostedApy": 0.15525437695732486,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -2898,9 +2970,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 405.9093968119618
@@ -2916,6 +2988,7 @@
       "address": "0x64506968e80c9ed07bff60c8d9d57474effff2c9",
       "name": "USD0++",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-01-30T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -2926,35 +2999,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1637.6585026692958
         }
       ],
       "formatted": {
+        "expiry": "January 30, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$46,598,931",
-          "acc": "$46,595,068"
+          "usd": "$46,602,705",
+          "acc": "$46,596,415"
         },
         "tradingVolume": {
           "usd": "$7,029,272"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "37.32%",
-        "underlyingApy": "37.32%",
-        "impliedApy": "29.19%",
-        "ytFloatingApy": "20711.29%",
+        "underlyingRewardApy": "36.84%",
+        "underlyingApy": "36.84%",
+        "impliedApy": "29.14%",
+        "ytFloatingApy": "17410.44%",
         "swapFeeApy": "0.14%",
-        "voterApy": "8.35%",
-        "ptDiscount": "1.69%",
-        "pendleApy": "4.63%",
+        "voterApy": "8.32%",
+        "ptDiscount": "1.68%",
+        "pendleApy": "4.65%",
         "arbApy": "0.00%",
-        "lpRewardApy": "1.23%",
-        "aggregatedApy": "33.79%",
-        "maxBoostedApy": "42.58%",
+        "lpRewardApy": "1.21%",
+        "aggregatedApy": "33.74%",
+        "maxBoostedApy": "42.53%",
         "totalPt": "45,134,612.6",
         "totalSy": "2,221,736.27",
         "totalLp": "23,112,409.56",
@@ -2969,40 +3043,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,637.66",
-            "usdValue": "$8,575"
+            "usdValue": "$8,607"
           }
         ]
       },
       "raw": {
         "address": "0x64506968e80c9ed07bff60c8d9d57474effff2c9",
         "name": "USD0++",
+        "expiry": "2025-01-30T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 46598930.70143569,
-          "acc": 46595067.504388906
+          "usd": 46602705.489908166,
+          "acc": 46596414.97388669
         },
         "tradingVolume": {
           "usd": 7029271.831890009
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.3731788334930415,
-        "underlyingApy": 0.3731788334930415,
-        "impliedApy": 0.29185924923087336,
-        "ytFloatingApy": 207.11291199019257,
-        "swapFeeApy": 0.0013607620132833897,
-        "voterApy": 0.08347519010149619,
-        "ptDiscount": 0.016866908008937975,
-        "pendleApy": 0.046331491739455194,
+        "underlyingRewardApy": 0.3683732318760403,
+        "underlyingApy": 0.3683732318760403,
+        "impliedApy": 0.29141070844055994,
+        "ytFloatingApy": 174.104352503187,
+        "swapFeeApy": 0.0013606644301178417,
+        "voterApy": 0.08324058053369408,
+        "ptDiscount": 0.0168370535486857,
+        "pendleApy": 0.04646025463160551,
         "arbApy": 0,
-        "lpRewardApy": 0.012269397147737147,
-        "aggregatedApy": 0.33790452843642366,
-        "maxBoostedApy": 0.42580586176721213,
+        "lpRewardApy": 0.012111048039713959,
+        "aggregatedApy": 0.33744809288872885,
+        "maxBoostedApy": 0.425305046895708,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3013,9 +3088,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1637.6585026692958
@@ -3031,6 +3106,7 @@
       "address": "0x048680f64d6dff1748ba6d9a01f578433787e24b",
       "name": "USD0++",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3041,35 +3117,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 512.5131949986918
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$16,564,472",
-          "acc": "$16,563,099"
+          "usd": "$16,565,399",
+          "acc": "$16,563,163"
         },
         "tradingVolume": {
-          "usd": "$533,120"
+          "usd": "$460,910"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "37.32%",
-        "underlyingApy": "37.32%",
+        "underlyingRewardApy": "36.84%",
+        "underlyingApy": "36.84%",
         "impliedApy": "20.65%",
-        "ytFloatingApy": "344.89%",
+        "ytFloatingApy": "332.80%",
         "swapFeeApy": "2.03%",
-        "voterApy": "6.31%",
+        "voterApy": "6.29%",
         "ptDiscount": "8.43%",
-        "pendleApy": "4.87%",
+        "pendleApy": "4.89%",
         "arbApy": "0.00%",
-        "lpRewardApy": "8.42%",
-        "aggregatedApy": "30.32%",
-        "maxBoostedApy": "50.26%",
+        "lpRewardApy": "8.31%",
+        "aggregatedApy": "30.22%",
+        "maxBoostedApy": "50.02%",
         "totalPt": "13,135,332.63",
         "totalSy": "4,535,206.54",
         "totalLp": "8,482,487.01",
@@ -3084,40 +3161,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "512.51",
-            "usdValue": "$2,684"
+            "usdValue": "$2,694"
           }
         ]
       },
       "raw": {
         "address": "0x048680f64d6dff1748ba6d9a01f578433787e24b",
         "name": "USD0++",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 16564472.172690053,
-          "acc": 16563098.926158085
+          "usd": 16565399.394476337,
+          "acc": 16563163.367421735
         },
         "tradingVolume": {
-          "usd": 533119.7977981289
+          "usd": 460909.96511292364
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.3731788334930415,
-        "underlyingApy": 0.3731788334930415,
-        "impliedApy": 0.2065096948243177,
-        "ytFloatingApy": 3.448859122960351,
-        "swapFeeApy": 0.020298192531254866,
-        "voterApy": 0.06308558321600496,
-        "ptDiscount": 0.084310026515103,
-        "pendleApy": 0.04873969342385739,
+        "underlyingRewardApy": 0.3683732318760403,
+        "underlyingApy": 0.3683732318760403,
+        "impliedApy": 0.20650969482524895,
+        "ytFloatingApy": 3.3279992557663434,
+        "swapFeeApy": 0.020298112777581867,
+        "voterApy": 0.06290892458999653,
+        "ptDiscount": 0.08430512056673678,
+        "pendleApy": 0.048876372353044935,
         "arbApy": 0,
-        "lpRewardApy": 0.08418846544038872,
-        "aggregatedApy": 0.303190823451578,
-        "maxBoostedApy": 0.5025830617479472,
+        "lpRewardApy": 0.0831040071356744,
+        "aggregatedApy": 0.30224318432001573,
+        "maxBoostedApy": 0.5002137535530947,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3128,9 +3206,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 512.5131949986918
@@ -3146,6 +3224,7 @@
       "address": "0x21d85ff3bedff031ef466c7d5295240c8ab2a2b8",
       "name": "sUSDS",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3156,18 +3235,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.18660104413197118
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$154,224",
-          "acc": "$154,178"
+          "usd": "$154,225",
+          "acc": "$154,179"
         },
         "tradingVolume": {
           "usd": "$0"
@@ -3176,7 +3256,7 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "12.50%",
         "impliedApy": "12.23%",
-        "ytFloatingApy": "7.48%",
+        "ytFloatingApy": "7.49%",
         "swapFeeApy": "0.00%",
         "voterApy": "0.00%",
         "ptDiscount": "2.50%",
@@ -3184,7 +3264,7 @@
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "12.49%",
-        "maxBoostedApy": "12.83%",
+        "maxBoostedApy": "12.84%",
         "totalPt": "142,947.56",
         "totalSy": "14,454.86",
         "totalLp": "76,890.02",
@@ -3199,9 +3279,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.19",
@@ -3212,27 +3292,28 @@
       "raw": {
         "address": "0x21d85ff3bedff031ef466c7d5295240c8ab2a2b8",
         "name": "sUSDS",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 154224.1100122485,
-          "acc": 154177.90438426146
+          "usd": 154224.78843527148,
+          "acc": 154178.58260402846
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.124999999999998,
+        "underlyingInterestApy": 0.12500262908871074,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.124999999999998,
-        "impliedApy": 0.12229130528392895,
-        "ytFloatingApy": 0.07476194382784529,
+        "underlyingApy": 0.12500262908871074,
+        "impliedApy": 0.12229130528716103,
+        "ytFloatingApy": 0.0748519399111045,
         "swapFeeApy": 1.3095064588242167e-8,
-        "voterApy": 0.000005719002984458612,
-        "ptDiscount": 0.025046679343931122,
-        "pendleApy": 0.0023190334696931336,
+        "voterApy": 0.000005711436711531156,
+        "ptDiscount": 0.02504239917121942,
+        "pendleApy": 0.0023221058209676277,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.12487055563432463,
-        "maxBoostedApy": 0.12834910583886433,
+        "aggregatedApy": 0.124873880566757,
+        "maxBoostedApy": 0.12835703929820844,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3243,9 +3324,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.18660104413197118
@@ -3261,6 +3342,7 @@
       "address": "0x461cd9222e130d1dc0bd79dab4643952430937c1",
       "name": "pWBTC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3271,35 +3353,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 81.84500897709353
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$905,180",
+          "usd": "$905,026",
           "acc": "$9"
         },
         "tradingVolume": {
           "usd": "$1,288"
         },
-        "underlyingInterestApy": "1.94%",
-        "underlyingRewardApy": "6.71%",
+        "underlyingInterestApy": "1.95%",
+        "underlyingRewardApy": "6.70%",
         "underlyingApy": "8.65%",
         "impliedApy": "3.67%",
-        "ytFloatingApy": "515.98%",
+        "ytFloatingApy": "515.76%",
         "swapFeeApy": "0.73%",
         "voterApy": "0.18%",
         "ptDiscount": "1.68%",
-        "pendleApy": "9.61%",
+        "pendleApy": "9.63%",
         "arbApy": "0.00%",
         "lpRewardApy": "3.23%",
-        "aggregatedApy": "15.74%",
-        "maxBoostedApy": "35.01%",
+        "aggregatedApy": "15.76%",
+        "maxBoostedApy": "35.04%",
         "totalPt": "1.24",
         "totalSy": "8.05",
         "totalLp": "0",
@@ -3314,40 +3397,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "81.85",
-            "usdValue": "$429"
+            "usdValue": "$430"
           }
         ]
       },
       "raw": {
         "address": "0x461cd9222e130d1dc0bd79dab4643952430937c1",
         "name": "pWBTC",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 905179.6776783036,
-          "acc": 9.282039315703651
+          "usd": 905026.0509368974,
+          "acc": 9.282046870546337
         },
         "tradingVolume": {
           "usd": 1287.9116869782097
         },
-        "underlyingInterestApy": 0.019442488138962988,
-        "underlyingRewardApy": 0.06708640925168345,
-        "underlyingApy": 0.08652889739064644,
-        "impliedApy": 0.03668618471923324,
-        "ytFloatingApy": 5.159792001613913,
-        "swapFeeApy": 0.007264305122572923,
-        "voterApy": 0.0018265676939848315,
-        "ptDiscount": 0.016761933348380942,
-        "pendleApy": 0.09613563157106392,
+        "underlyingInterestApy": 0.01945947806133086,
+        "underlyingRewardApy": 0.06704913326887327,
+        "underlyingApy": 0.08650861133020413,
+        "impliedApy": 0.036686184719438186,
+        "ytFloatingApy": 5.157582263671407,
+        "swapFeeApy": 0.007264304506932051,
+        "voterApy": 0.0018238332123076478,
+        "ptDiscount": 0.016760585351166424,
+        "pendleApy": 0.09627976004309904,
         "arbApy": 0,
-        "lpRewardApy": 0.03231576348935288,
-        "aggregatedApy": 0.15742815796141663,
-        "maxBoostedApy": 0.35010525055204184,
+        "lpRewardApy": 0.032297804787509383,
+        "aggregatedApy": 0.15756908173895404,
+        "maxBoostedApy": 0.3504354289848667,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3358,9 +3442,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 81.84500897709353
@@ -3376,6 +3460,7 @@
       "address": "0x2bf616c236d1abd31ff105247a774e6e738b5f4e",
       "name": "scrvUSD",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3386,18 +3471,19 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1.9882353506701536
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$149,582",
-          "acc": "$149,625"
+          "usd": "$149,571",
+          "acc": "$149,626"
         },
         "tradingVolume": {
           "usd": "$0"
@@ -3406,7 +3492,7 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "15.20%",
         "impliedApy": "14.79%",
-        "ytFloatingApy": "13.75%",
+        "ytFloatingApy": "13.76%",
         "swapFeeApy": "0.03%",
         "voterApy": "1.13%",
         "ptDiscount": "6.27%",
@@ -3414,7 +3500,7 @@
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "17.52%",
-        "maxBoostedApy": "21.34%",
+        "maxBoostedApy": "21.35%",
         "totalPt": "99,197.05",
         "totalSy": "54,992.66",
         "totalLp": "75,805.01",
@@ -3429,9 +3515,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1.99",
@@ -3442,27 +3528,28 @@
       "raw": {
         "address": "0x2bf616c236d1abd31ff105247a774e6e738b5f4e",
         "name": "scrvUSD",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 149581.75417691312,
-          "acc": 149625.01467827207
+          "usd": 149571.47269429298,
+          "acc": 149625.81195843624
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.15195596824834734,
+        "underlyingInterestApy": 0.1519621206990922,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.15195596824834734,
-        "impliedApy": 0.14788258331925808,
-        "ytFloatingApy": 0.1375088369087556,
-        "swapFeeApy": 0.0002823498871993291,
-        "voterApy": 0.011326461185203848,
-        "ptDiscount": 0.06265892299151365,
-        "pendleApy": 0.025467608960755676,
+        "underlyingApy": 0.1519621206990922,
+        "impliedApy": 0.14788258332012605,
+        "ytFloatingApy": 0.13760244951195766,
+        "swapFeeApy": 0.00028234992449105434,
+        "voterApy": 0.011310649521763605,
+        "ptDiscount": 0.06265400375684915,
+        "pendleApy": 0.025503214639606166,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.17517460350059294,
-        "maxBoostedApy": 0.21337601694172648,
+        "aggregatedApy": 0.1752125385545021,
+        "maxBoostedApy": 0.21346736051391135,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3473,9 +3560,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1.9882353506701536
@@ -3491,6 +3578,7 @@
       "address": "0x15e434c42ab4c9a62ed7db53baaf9d255ea51e0e",
       "name": "OETH",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-12-25T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3501,17 +3589,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 0.0080809406050464
         }
       ],
       "formatted": {
+        "expiry": "December 25, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$98,544",
+          "usd": "$98,449",
           "acc": "$27"
         },
         "tradingVolume": {
@@ -3544,9 +3633,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "0.01",
@@ -3557,10 +3646,11 @@
       "raw": {
         "address": "0x15e434c42ab4c9a62ed7db53baaf9d255ea51e0e",
         "name": "OETH",
+        "expiry": "2025-12-25T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 98544.09335646324,
-          "acc": 27.200938620612213
+          "usd": 98448.55616651416,
+          "acc": 27.200962709887943
         },
         "tradingVolume": {
           "usd": 0
@@ -3568,16 +3658,16 @@
         "underlyingInterestApy": 0.03613399306546006,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.03613399306546006,
-        "impliedApy": 0.04975337693676041,
-        "ytFloatingApy": -0.2688827541705394,
+        "impliedApy": 0.04975337693682613,
+        "ytFloatingApy": -0.26889296266753093,
         "swapFeeApy": 0,
         "voterApy": 0,
-        "ptDiscount": 0.045904962529533466,
-        "pendleApy": 0.00015716951638330406,
+        "ptDiscount": 0.045903199730010114,
+        "pendleApy": 0.00015753115770806523,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.04281925096477191,
-        "maxBoostedApy": 0.04305500523934687,
+        "aggregatedApy": 0.04281961888620635,
+        "maxBoostedApy": 0.04305591562276845,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3588,9 +3678,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 0.0080809406050464
@@ -3606,6 +3696,7 @@
       "address": "0x3fd13bad9fc47e001bf9088afd1a1b2fc24673d5",
       "name": "SolvBTC.BBN",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3616,17 +3707,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1006.2421436093081
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$34,080,939",
+          "usd": "$34,039,190",
           "acc": "$352"
         },
         "tradingVolume": {
@@ -3638,13 +3730,13 @@
         "impliedApy": "7.38%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "2.41%",
-        "voterApy": "3.78%",
+        "voterApy": "3.77%",
         "ptDiscount": "1.55%",
-        "pendleApy": "5.14%",
+        "pendleApy": "5.15%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "11.27%",
-        "maxBoostedApy": "18.98%",
+        "aggregatedApy": "11.28%",
+        "maxBoostedApy": "19.01%",
         "totalPt": "180.05",
         "totalSy": "174.65",
         "totalLp": "0",
@@ -3659,23 +3751,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,006.24",
-            "usdValue": "$5,269"
+            "usdValue": "$5,289"
           }
         ]
       },
       "raw": {
         "address": "0x3fd13bad9fc47e001bf9088afd1a1b2fc24673d5",
         "name": "SolvBTC.BBN",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 34080938.67205955,
-          "acc": 351.90486531392435
+          "usd": 34039189.826325305,
+          "acc": 351.90534530302676
         },
         "tradingVolume": {
           "usd": 0
@@ -3683,16 +3776,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.0737588029172449,
+        "impliedApy": 0.07375880291915271,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.024139985780855966,
-        "voterApy": 0.03783012205219399,
-        "ptDiscount": 0.015524598392994138,
-        "pendleApy": 0.05140797615541343,
+        "swapFeeApy": 0.024139952467951087,
+        "voterApy": 0.03773357175295616,
+        "ptDiscount": 0.015521932462126853,
+        "pendleApy": 0.05153944536541278,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.11269942759632934,
-        "maxBoostedApy": 0.1898113918294495,
+        "aggregatedApy": 0.1128309134257745,
+        "maxBoostedApy": 0.19014008147389366,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3703,9 +3796,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1006.2421436093081
@@ -3721,6 +3814,7 @@
       "address": "0x380c751bd0412f47ca560b6afeb566d88dc18630",
       "name": "uniBTC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3731,17 +3825,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1079.7563696235816
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$52,025,711",
+          "usd": "$52,016,852",
           "acc": "$533"
         },
         "tradingVolume": {
@@ -3755,11 +3850,11 @@
         "swapFeeApy": "0.00%",
         "voterApy": "0.00%",
         "ptDiscount": "0.91%",
-        "pendleApy": "2.97%",
+        "pendleApy": "2.98%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "3.63%",
-        "maxBoostedApy": "8.09%",
+        "maxBoostedApy": "8.10%",
         "totalPt": "83",
         "totalSy": "451.25",
         "totalLp": "0",
@@ -3774,23 +3869,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,079.76",
-            "usdValue": "$5,654"
+            "usdValue": "$5,675"
           }
         ]
       },
       "raw": {
         "address": "0x380c751bd0412f47ca560b6afeb566d88dc18630",
         "name": "uniBTC",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 52025711.015908174,
-          "acc": 533.4904242328347
+          "usd": 52016851.62205733,
+          "acc": 533.4905547631788
         },
         "tradingVolume": {
           "usd": 9657.037536412192
@@ -3798,16 +3894,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.04259156431642164,
+        "impliedApy": 0.04259156431750721,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.0000022605116778429135,
-        "voterApy": 0.00004396963938245849,
-        "ptDiscount": 0.009128299946648322,
-        "pendleApy": 0.029730224000032293,
+        "swapFeeApy": 0.000002260511133611587,
+        "voterApy": 0.00004390378216161918,
+        "ptDiscount": 0.009126727313760075,
+        "pendleApy": 0.029774813098942147,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.036298448806652485,
-        "maxBoostedApy": 0.08089378480670092,
+        "aggregatedApy": 0.03634304671965074,
+        "maxBoostedApy": 0.08100526636806396,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3818,9 +3914,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1079.7563696235816
@@ -3836,6 +3932,7 @@
       "address": "0xd3c29550d12a5234e6aeb5aea7c841134cd6ddd5",
       "name": "sUSDe",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-02-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3846,37 +3943,38 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1362.9690474794977
         }
       ],
       "formatted": {
+        "expiry": "February 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$41,492,544",
-          "acc": "$41,585,916"
+          "usd": "$41,491,603",
+          "acc": "$41,585,083"
         },
         "tradingVolume": {
-          "usd": "$24,356,912"
+          "usd": "$24,452,312"
         },
         "underlyingInterestApy": "10.20%",
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "10.20%",
-        "impliedApy": "21.45%",
-        "ytFloatingApy": "-99.26%",
+        "impliedApy": "21.56%",
+        "ytFloatingApy": "-99.29%",
         "swapFeeApy": "0.94%",
-        "voterApy": "35.12%",
-        "ptDiscount": "2.74%",
-        "pendleApy": "5.82%",
+        "voterApy": "35.03%",
+        "ptDiscount": "2.76%",
+        "pendleApy": "5.84%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "18.92%",
-        "maxBoostedApy": "27.66%",
-        "totalPt": "7,451,071.19",
-        "totalSy": "29,998,186.11",
+        "aggregatedApy": "18.99%",
+        "maxBoostedApy": "27.75%",
+        "totalPt": "7,558,127.05",
+        "totalSy": "29,907,251.75",
         "totalLp": "19,714,492.71",
         "totalActiveSupply": "8,504,357.49",
         "estimatedDailyPoolRewards": [
@@ -3889,40 +3987,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,362.97",
-            "usdValue": "$7,137"
+            "usdValue": "$7,164"
           }
         ]
       },
       "raw": {
         "address": "0xd3c29550d12a5234e6aeb5aea7c841134cd6ddd5",
         "name": "sUSDe",
+        "expiry": "2025-02-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 41492544.3428615,
-          "acc": 41585916.30768409
+          "usd": 41491603.34174428,
+          "acc": 41585082.5008706
         },
         "tradingVolume": {
-          "usd": 24356912.25142836
+          "usd": 24452311.76815673
         },
         "underlyingInterestApy": 0.10198366598479813,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.10198366598479813,
-        "impliedApy": 0.21447649867032093,
-        "ytFloatingApy": -0.9926490848532198,
-        "swapFeeApy": 0.009414866946604095,
-        "voterApy": 0.351178427727285,
-        "ptDiscount": 0.02743059442912288,
-        "pendleApy": 0.058236497037733696,
+        "impliedApy": 0.21562039838555092,
+        "ytFloatingApy": -0.9928970400039184,
+        "swapFeeApy": 0.009422406992995347,
+        "voterApy": 0.35029457295249206,
+        "ptDiscount": 0.027556227926919585,
+        "pendleApy": 0.058404401064627284,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.18923782027912248,
-        "maxBoostedApy": 0.276592565835723,
+        "aggregatedApy": 0.18989492005519293,
+        "maxBoostedApy": 0.2775015216521339,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -3933,16 +4032,16 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1362.9690474794977
           }
         ],
-        "totalPt": 7451071.191841164,
-        "totalSy": 29998186.112753015,
+        "totalPt": 7558127.051468988,
+        "totalSy": 29907251.752293088,
         "totalLp": 19714492.711165786,
         "totalActiveSupply": 8504357.486178072
       }
@@ -3951,6 +4050,7 @@
       "address": "0x22a72b0c504cbb7f8245208f84d8f035c311adec",
       "name": "USD0++",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-02-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -3961,35 +4061,36 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 557.2091758605998
         }
       ],
       "formatted": {
+        "expiry": "February 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$10,328,652",
-          "acc": "$10,326,922"
+          "usd": "$10,328,978",
+          "acc": "$10,326,933"
         },
         "tradingVolume": {
           "usd": "$1,658,251"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "37.48%",
-        "underlyingApy": "37.48%",
+        "underlyingRewardApy": "36.84%",
+        "underlyingApy": "36.84%",
         "impliedApy": "24.97%",
-        "ytFloatingApy": "3307.63%",
+        "ytFloatingApy": "2923.55%",
         "swapFeeApy": "0.46%",
-        "voterApy": "9.53%",
+        "voterApy": "9.52%",
         "ptDiscount": "3.14%",
-        "pendleApy": "6.10%",
+        "pendleApy": "6.11%",
         "arbApy": "0.00%",
-        "lpRewardApy": "19.37%",
-        "aggregatedApy": "29.01%",
-        "maxBoostedApy": "67.21%",
+        "lpRewardApy": "19.04%",
+        "aggregatedApy": "28.69%",
+        "maxBoostedApy": "66.40%",
         "totalPt": "1,317,320.13",
         "totalSy": "9,050,968.92",
         "totalLp": "5,272,856.85",
@@ -4004,40 +4105,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "557.21",
-            "usdValue": "$2,918"
+            "usdValue": "$2,929"
           }
         ]
       },
       "raw": {
         "address": "0x22a72b0c504cbb7f8245208f84d8f035c311adec",
         "name": "USD0++",
+        "expiry": "2025-02-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 10328652.029815553,
-          "acc": 10326921.857327575
+          "usd": 10328978.134789655,
+          "acc": 10326932.679233879
         },
         "tradingVolume": {
           "usd": 1658251.4416642818
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.37478044627935997,
-        "underlyingApy": 0.37478044627935997,
-        "impliedApy": 0.24968447647888303,
-        "ytFloatingApy": 33.07633285949942,
-        "swapFeeApy": 0.004574275164417996,
-        "voterApy": 0.09528880321270995,
-        "ptDiscount": 0.03140253440472063,
-        "pendleApy": 0.06097458739462865,
+        "underlyingRewardApy": 0.3683732318760403,
+        "underlyingApy": 0.3683732318760403,
+        "impliedApy": 0.24968447649528924,
+        "ytFloatingApy": 29.235537753812714,
+        "swapFeeApy": 0.004574270360153454,
+        "voterApy": 0.09516521390764045,
+        "ptDiscount": 0.031394319312525454,
+        "pendleApy": 0.06105370998463386,
         "arbApy": 0,
-        "lpRewardApy": 0.1936995995073262,
-        "aggregatedApy": 0.29009847193371036,
-        "maxBoostedApy": 0.6721097522866427,
+        "lpRewardApy": 0.19038792823429004,
+        "aggregatedApy": 0.2868661477717238,
+        "maxBoostedApy": 0.6640286051001096,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4048,9 +4150,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 557.2091758605998
@@ -4066,6 +4168,7 @@
       "address": "0x81f3a11db1de16f4f9ba8bf46b71d2b168c64899",
       "name": "USD0++",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-04-24T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4076,39 +4179,40 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 468.8451720254796
         }
       ],
       "formatted": {
+        "expiry": "April 24, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$12,670,081",
-          "acc": "$12,667,958"
+          "usd": "$12,670,486",
+          "acc": "$12,667,976"
         },
         "tradingVolume": {
           "usd": "$87,443"
         },
         "underlyingInterestApy": "0.00%",
-        "underlyingRewardApy": "37.48%",
-        "underlyingApy": "37.48%",
+        "underlyingRewardApy": "36.84%",
+        "underlyingApy": "36.84%",
         "impliedApy": "22.26%",
-        "ytFloatingApy": "715.58%",
+        "ytFloatingApy": "669.71%",
         "swapFeeApy": "0.07%",
         "voterApy": "0.71%",
         "ptDiscount": "5.79%",
-        "pendleApy": "4.19%",
+        "pendleApy": "4.23%",
         "arbApy": "0.00%",
-        "lpRewardApy": "17.96%",
-        "aggregatedApy": "26.42%",
-        "maxBoostedApy": "59.65%",
+        "lpRewardApy": "17.80%",
+        "aggregatedApy": "26.29%",
+        "maxBoostedApy": "59.32%",
         "totalPt": "2,534,346.61",
         "totalSy": "10,280,243.55",
         "totalLp": "6,515,485.49",
-        "totalActiveSupply": "4,412,318.43",
+        "totalActiveSupply": "4,377,788.49",
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4119,40 +4223,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "468.85",
-            "usdValue": "$2,455"
+            "usdValue": "$2,464"
           }
         ]
       },
       "raw": {
         "address": "0x81f3a11db1de16f4f9ba8bf46b71d2b168c64899",
         "name": "USD0++",
+        "expiry": "2025-04-24T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 12670080.619901612,
-          "acc": 12667958.230179727
+          "usd": 12670485.634957656,
+          "acc": 12667976.488854509
         },
         "tradingVolume": {
           "usd": 87442.8558168764
         },
         "underlyingInterestApy": 0,
-        "underlyingRewardApy": 0.37478044627935997,
-        "underlyingApy": 0.37478044627935997,
-        "impliedApy": 0.22257640418322433,
-        "ytFloatingApy": 7.155835617676576,
-        "swapFeeApy": 0.0006791151952478813,
-        "voterApy": 0.007068427042312065,
-        "ptDiscount": 0.05785788089459987,
-        "pendleApy": 0.041892534570681476,
+        "underlyingRewardApy": 0.3683732318760403,
+        "underlyingApy": 0.3683732318760403,
+        "impliedApy": 0.2225764041865952,
+        "ytFloatingApy": 6.697065751194058,
+        "swapFeeApy": 0.0006791142160895713,
+        "voterApy": 0.007059259312666598,
+        "ptDiscount": 0.05785067640459762,
+        "pendleApy": 0.04227773646180956,
         "arbApy": 0,
-        "lpRewardApy": 0.179644378132404,
-        "aggregatedApy": 0.26416824610928913,
-        "maxBoostedApy": 0.5964736151639173,
+        "lpRewardApy": 0.17796566317714366,
+        "aggregatedApy": 0.26287499240483964,
+        "maxBoostedApy": 0.5932400918632694,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4163,9 +4268,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 468.8451720254796
@@ -4174,13 +4279,14 @@
         "totalPt": 2534346.6052443665,
         "totalSy": 10280243.548967224,
         "totalLp": 6515485.488257807,
-        "totalActiveSupply": 4412318.431044874
+        "totalActiveSupply": 4377788.490717846
       }
     },
     {
       "address": "0x8539b41ca14148d1f7400d399723827a80579414",
       "name": "aUSDC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4191,9 +4297,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 7.651074414791693
@@ -4208,16 +4314,17 @@
             "price": {
               "usd": 340.89229
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "AAVE"
           },
           "amount": 0
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$442,259",
-          "acc": "$442,242"
+          "usd": "$442,243",
+          "acc": "$442,243"
         },
         "tradingVolume": {
           "usd": "$0"
@@ -4226,15 +4333,15 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "10.08%",
         "impliedApy": "10.75%",
-        "ytFloatingApy": "-9.16%",
+        "ytFloatingApy": "-9.20%",
         "swapFeeApy": "0.00%",
         "voterApy": "0.00%",
         "ptDiscount": "4.68%",
-        "pendleApy": "2.32%",
+        "pendleApy": "2.33%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "12.60%",
-        "maxBoostedApy": "16.08%",
+        "aggregatedApy": "12.61%",
+        "maxBoostedApy": "16.10%",
         "totalPt": "137,590.15",
         "totalSy": "279,760.46",
         "totalLp": "0",
@@ -4249,9 +4356,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "7.65",
@@ -4267,7 +4374,7 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
             "amount": "0",
@@ -4278,27 +4385,28 @@
       "raw": {
         "address": "0x8539b41ca14148d1f7400d399723827a80579414",
         "name": "aUSDC",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 442258.6068776297,
-          "acc": 442241.6513327176
+          "usd": 442242.88640587364,
+          "acc": 442242.80680216843
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.10080979105158949,
+        "underlyingInterestApy": 0.1007908842214007,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.10080979105158949,
-        "impliedApy": 0.10749078733456541,
-        "ytFloatingApy": -0.0916201389384631,
+        "underlyingApy": 0.1007908842214007,
+        "impliedApy": 0.10749078733503059,
+        "ytFloatingApy": -0.09198499410084304,
         "swapFeeApy": 0,
         "voterApy": 0,
-        "ptDiscount": 0.046771337406541935,
-        "pendleApy": 0.023217920985163856,
+        "ptDiscount": 0.04676855995702989,
+        "pendleApy": 0.023285161141778296,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.1260090841180233,
-        "maxBoostedApy": 0.1608359655957691,
+        "aggregatedApy": 0.12606302521015006,
+        "maxBoostedApy": 0.16099076692281752,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4309,9 +4417,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 7.651074414791693
@@ -4326,7 +4434,7 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
             "amount": 0
@@ -4342,6 +4450,7 @@
       "address": "0x12f6139a5dc6d80990d30a4d45bb86449ff804d8",
       "name": "aUSDT",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4352,9 +4461,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 16.34238876198983
@@ -4369,15 +4478,16 @@
             "price": {
               "usd": 340.89229
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "AAVE"
           },
           "amount": 0
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$170,136",
+          "usd": "$170,137",
           "acc": "$170,180"
         },
         "tradingVolume": {
@@ -4387,15 +4497,15 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "7.49%",
         "impliedApy": "9.99%",
-        "ytFloatingApy": "-43.41%",
+        "ytFloatingApy": "-43.39%",
         "swapFeeApy": "0.03%",
         "voterApy": "0.16%",
         "ptDiscount": "4.37%",
-        "pendleApy": "13.98%",
+        "pendleApy": "13.97%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "22.22%",
-        "maxBoostedApy": "43.18%",
+        "aggregatedApy": "22.21%",
+        "maxBoostedApy": "43.17%",
         "totalPt": "51,197.94",
         "totalSy": "109,523.29",
         "totalLp": "0",
@@ -4410,9 +4520,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "16.34",
@@ -4428,7 +4538,7 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
             "amount": "0",
@@ -4439,27 +4549,28 @@
       "raw": {
         "address": "0x12f6139a5dc6d80990d30a4d45bb86449ff804d8",
         "name": "aUSDT",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 170136.44463654325,
-          "acc": 170179.72133967993
+          "usd": 170137.42573231098,
+          "acc": 170180.10860535028
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.07491581333742636,
+        "underlyingInterestApy": 0.0749258765756935,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.07491581333742636,
-        "impliedApy": 0.09987197894365796,
-        "ytFloatingApy": -0.43408428694124535,
-        "swapFeeApy": 0.0002838496238064536,
-        "voterApy": 0.0015777917740165063,
-        "ptDiscount": 0.043679620051736534,
-        "pendleApy": 0.13977970065265147,
+        "underlyingApy": 0.0749258765756935,
+        "impliedApy": 0.09987206386592318,
+        "ytFloatingApy": -0.43394872907703586,
+        "swapFeeApy": 0.0002838495773771488,
+        "voterApy": 0.0015783294251649018,
+        "ptDiscount": 0.04367705663661603,
+        "pendleApy": 0.13973206244649045,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.22215938849614508,
-        "maxBoostedApy": 0.4318289394751223,
+        "aggregatedApy": 0.2221189455717284,
+        "maxBoostedApy": 0.43171703924146404,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4470,9 +4581,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 16.34238876198983
@@ -4487,7 +4598,7 @@
               "price": {
                 "usd": 340.89229
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "AAVE"
             },
             "amount": 0
@@ -4503,6 +4614,7 @@
       "address": "0x925cd38a68993819eef0138a463308c840080f17",
       "name": "fUSDC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4513,9 +4625,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 12.228081097695954
@@ -4530,35 +4642,36 @@
             "expiry": null,
             "accentColor": "",
             "price": {
-              "usd": 6.3600482128119555
+              "usd": 6.370705984950186
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "FLUID"
           },
           "amount": 0
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$646,659",
-          "acc": "$646,635"
+          "usd": "$646,637",
+          "acc": "$646,637"
         },
         "tradingVolume": {
           "usd": "$0"
         },
-        "underlyingInterestApy": "13.46%",
+        "underlyingInterestApy": "13.45%",
         "underlyingRewardApy": "0.00%",
-        "underlyingApy": "13.46%",
+        "underlyingApy": "13.45%",
         "impliedApy": "14.10%",
-        "ytFloatingApy": "-2.86%",
+        "ytFloatingApy": "-2.93%",
         "swapFeeApy": "0.09%",
-        "voterApy": "2.60%",
+        "voterApy": "2.59%",
         "ptDiscount": "6.00%",
         "pendleApy": "2.53%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "16.32%",
-        "maxBoostedApy": "20.11%",
+        "maxBoostedApy": "20.12%",
         "totalPt": "259,895.69",
         "totalSy": "357,441.17",
         "totalLp": "0",
@@ -4573,9 +4686,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "12.23",
@@ -4591,9 +4704,9 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 6.3600482128119555
+                "usd": 6.370705984950186
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "FLUID"
             },
             "amount": "0",
@@ -4604,27 +4717,28 @@
       "raw": {
         "address": "0x925cd38a68993819eef0138a463308c840080f17",
         "name": "fUSDC",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 646659.437469478,
-          "acc": 646634.7014045442
+          "usd": 646636.9922204664,
+          "acc": 646636.9322031399
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.13457898122861622,
+        "underlyingInterestApy": 0.13452948974127255,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.13457898122861622,
-        "impliedApy": 0.1409965046373971,
-        "ytFloatingApy": -0.02860186521409036,
-        "swapFeeApy": 0.0009236190188568472,
-        "voterApy": 0.02595581551398237,
-        "ptDiscount": 0.06000810412446966,
-        "pendleApy": 0.02525044059730218,
+        "underlyingApy": 0.13452948974127255,
+        "impliedApy": 0.14099650463801572,
+        "ytFloatingApy": -0.029347807131407277,
+        "swapFeeApy": 0.00092361884240999,
+        "voterApy": 0.025880880059128804,
+        "ptDiscount": 0.0600045656814604,
+        "pendleApy": 0.025323545843311684,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.16317759363130258,
-        "maxBoostedApy": 0.20105325452725584,
+        "aggregatedApy": 0.1632199059619681,
+        "maxBoostedApy": 0.20120522472693564,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4635,9 +4749,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 12.228081097695954
@@ -4652,9 +4766,9 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 6.3600482128119555
+                "usd": 6.370705984950186
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "FLUID"
             },
             "amount": 0
@@ -4670,6 +4784,7 @@
       "address": "0x8e1c2be682b0d3d8f8ee32024455a34cc724cf08",
       "name": "fUSDT",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4680,9 +4795,9 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 34.36282004921326
@@ -4697,18 +4812,19 @@
             "expiry": null,
             "accentColor": "",
             "price": {
-              "usd": 6.3600482128119555
+              "usd": 6.370705984950186
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "FLUID"
           },
           "amount": 0
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$754,957",
-          "acc": "$755,149"
+          "usd": "$754,963",
+          "acc": "$755,152"
         },
         "tradingVolume": {
           "usd": "$0"
@@ -4717,7 +4833,7 @@
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "12.95%",
         "impliedApy": "11.82%",
-        "ytFloatingApy": "26.60%",
+        "ytFloatingApy": "26.64%",
         "swapFeeApy": "0.03%",
         "voterApy": "0.40%",
         "ptDiscount": "5.11%",
@@ -4725,7 +4841,7 @@
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "19.64%",
-        "maxBoostedApy": "30.10%",
+        "maxBoostedApy": "30.09%",
         "totalPt": "222,659.73",
         "totalSy": "484,812.13",
         "totalLp": "0",
@@ -4740,13 +4856,13 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "34.36",
-            "usdValue": "$180"
+            "usdValue": "$181"
           },
           {
             "asset": {
@@ -4758,9 +4874,9 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 6.3600482128119555
+                "usd": 6.370705984950186
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "FLUID"
             },
             "amount": "0",
@@ -4771,27 +4887,28 @@
       "raw": {
         "address": "0x8e1c2be682b0d3d8f8ee32024455a34cc724cf08",
         "name": "fUSDT",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 754957.2630830554,
-          "acc": 755149.3722837116
+          "usd": 754962.5914470477,
+          "acc": 755152.0284850793
         },
         "tradingVolume": {
           "usd": 0
         },
-        "underlyingInterestApy": 0.1295291725208021,
+        "underlyingInterestApy": 0.12954560764667966,
         "underlyingRewardApy": 0,
-        "underlyingApy": 0.1295291725208021,
-        "impliedApy": 0.11820781232661326,
-        "ytFloatingApy": 0.266032003683073,
-        "swapFeeApy": 0.0003465833044073996,
-        "voterApy": 0.004041253171847932,
-        "ptDiscount": 0.05106913429542914,
-        "pendleApy": 0.06971134645175632,
+        "underlyingApy": 0.12954560764667966,
+        "impliedApy": 0.11820791365996208,
+        "ytFloatingApy": 0.26637073776443354,
+        "swapFeeApy": 0.00034658335441850596,
+        "voterApy": 0.004042636741179098,
+        "ptDiscount": 0.05106614890840322,
+        "pendleApy": 0.0696874981966533,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.1964194171851903,
-        "maxBoostedApy": 0.3009864368628248,
+        "aggregatedApy": 0.19640743513442538,
+        "maxBoostedApy": 0.30093868242940536,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4802,9 +4919,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 34.36282004921326
@@ -4819,9 +4936,9 @@
               "expiry": null,
               "accentColor": "",
               "price": {
-                "usd": 6.3600482128119555
+                "usd": 6.370705984950186
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "FLUID"
             },
             "amount": 0
@@ -4837,6 +4954,7 @@
       "address": "0x523f9441853467477b4dde653c554942f8e17162",
       "name": "eBTC",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4847,17 +4965,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 19.972795665837772
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$1,010,262",
+          "usd": "$1,011,226",
           "acc": "$10"
         },
         "tradingVolume": {
@@ -4871,11 +4990,11 @@
         "swapFeeApy": "0.19%",
         "voterApy": "1.79%",
         "ptDiscount": "2.79%",
-        "pendleApy": "3.77%",
+        "pendleApy": "3.78%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "6.38%",
-        "maxBoostedApy": "12.03%",
+        "maxBoostedApy": "12.05%",
         "totalPt": "4.15",
         "totalSy": "6.34",
         "totalLp": "0",
@@ -4890,9 +5009,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "19.97",
@@ -4903,10 +5022,11 @@
       "raw": {
         "address": "0x523f9441853467477b4dde653c554942f8e17162",
         "name": "eBTC",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 1010262.2076586109,
-          "acc": 10.37906543086886
+          "usd": 1011226.4800782932,
+          "acc": 10.379072373552379
         },
         "tradingVolume": {
           "usd": 38883.86013509248
@@ -4914,16 +5034,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.062148376805062355,
+        "impliedApy": 0.062148376805325256,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.0019336519569594923,
-        "voterApy": 0.017924028934568067,
-        "ptDiscount": 0.027891407678423907,
-        "pendleApy": 0.037682781786913255,
+        "swapFeeApy": 0.0019336506622953387,
+        "voterApy": 0.017889952651710703,
+        "ptDiscount": 0.02788973496153213,
+        "pendleApy": 0.03775453364421394,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.0637761176634417,
-        "maxBoostedApy": 0.12030029034381158,
+        "aggregatedApy": 0.06384789363726368,
+        "maxBoostedApy": 0.12047969410358458,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -4934,9 +5054,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 19.972795665837772
@@ -4952,6 +5072,7 @@
       "address": "0xb9b7840ec34094ce1269c38ba7a6ac7407f9c4e3",
       "name": "USUALx",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -4962,39 +5083,40 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 1515.676002309708
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$20,654,418",
-          "acc": "$20,539,327"
+          "usd": "$20,561,781",
+          "acc": "$20,539,995"
         },
         "tradingVolume": {
           "usd": "$719,287"
         },
-        "underlyingInterestApy": "293.80%",
+        "underlyingInterestApy": "293.65%",
         "underlyingRewardApy": "0.00%",
-        "underlyingApy": "293.80%",
+        "underlyingApy": "293.65%",
         "impliedApy": "141.41%",
-        "ytFloatingApy": "1921.21%",
+        "ytFloatingApy": "1918.67%",
         "swapFeeApy": "2.08%",
-        "voterApy": "26.84%",
+        "voterApy": "26.63%",
         "ptDiscount": "17.61%",
-        "pendleApy": "8.33%",
+        "pendleApy": "8.39%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "265.54%",
-        "maxBoostedApy": "278.03%",
+        "aggregatedApy": "265.48%",
+        "maxBoostedApy": "278.06%",
         "totalPt": "6,325,894.82",
         "totalSy": "13,131,966.36",
         "totalLp": "10,064,071.18",
-        "totalActiveSupply": "6,783,605.52",
+        "totalActiveSupply": "6,784,203.08",
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5005,40 +5127,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "1,515.68",
-            "usdValue": "$7,936"
+            "usdValue": "$7,966"
           }
         ]
       },
       "raw": {
         "address": "0xb9b7840ec34094ce1269c38ba7a6ac7407f9c4e3",
         "name": "USUALx",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 20654417.723330244,
-          "acc": 20539326.66116763
+          "usd": 20561781.258113332,
+          "acc": 20539995.055539016
         },
         "tradingVolume": {
           "usd": 719286.7402126823
         },
-        "underlyingInterestApy": 2.938004275776645,
+        "underlyingInterestApy": 2.936466726660452,
         "underlyingRewardApy": 0,
-        "underlyingApy": 2.938004275776645,
-        "impliedApy": 1.4141100240015292,
-        "ytFloatingApy": 19.212140259831667,
-        "swapFeeApy": 0.020794884076648756,
-        "voterApy": 0.2684140833694244,
-        "ptDiscount": 0.17614601110495953,
-        "pendleApy": 0.08326102479366558,
+        "underlyingApy": 2.936466726660452,
+        "impliedApy": 1.414110024041371,
+        "ytFloatingApy": 19.186692796871007,
+        "swapFeeApy": 0.020772839199958648,
+        "voterApy": 0.26629213827932563,
+        "ptDiscount": 0.1761252891632169,
+        "pendleApy": 0.08386798319951748,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 2.655389858764153,
-        "maxBoostedApy": 2.7802813959546513,
+        "aggregatedApy": 2.65483021268888,
+        "maxBoostedApy": 2.780632187488156,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5049,9 +5172,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 1515.676002309708
@@ -5060,13 +5183,14 @@
         "totalPt": 6325894.822280036,
         "totalSy": 13131966.362450935,
         "totalLp": 10064071.175916718,
-        "totalActiveSupply": 6783605.51889441
+        "totalActiveSupply": 6784203.083258408
       }
     },
     {
       "address": "0x353d0b2efb5b3a7987fb06d30ad6160522d08426",
       "name": "wstUSR",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-03-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5077,37 +5201,38 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 2735.6143576837376
         }
       ],
       "formatted": {
+        "expiry": "March 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$51,462,297",
-          "acc": "$51,454,733"
+          "usd": "$51,454,993",
+          "acc": "$51,455,151"
         },
         "tradingVolume": {
-          "usd": "$6,688,121"
+          "usd": "$6,684,675"
         },
         "underlyingInterestApy": "12.95%",
         "underlyingRewardApy": "0.00%",
         "underlyingApy": "12.95%",
-        "impliedApy": "34.22%",
+        "impliedApy": "34.21%",
         "ytFloatingApy": "-98.06%",
         "swapFeeApy": "1.25%",
-        "voterApy": "15.99%",
-        "ptDiscount": "6.27%",
-        "pendleApy": "8.24%",
+        "voterApy": "15.96%",
+        "ptDiscount": "6.26%",
+        "pendleApy": "8.25%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "29.24%",
-        "maxBoostedApy": "41.60%",
-        "totalPt": "17,559,247.66",
-        "totalSy": "33,108,428.01",
+        "aggregatedApy": "29.25%",
+        "maxBoostedApy": "41.62%",
+        "totalPt": "17,550,946.16",
+        "totalSy": "33,115,793.36",
         "totalLp": "25,770,224.83",
         "totalActiveSupply": "12,750,796.33",
         "estimatedDailyPoolRewards": [
@@ -5120,40 +5245,41 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "2,735.61",
-            "usdValue": "$14,324"
+            "usdValue": "$14,378"
           }
         ]
       },
       "raw": {
         "address": "0x353d0b2efb5b3a7987fb06d30ad6160522d08426",
         "name": "wstUSR",
+        "expiry": "2025-03-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 51462297.369176544,
-          "acc": 51454733.27382983
+          "usd": 51454993.324550666,
+          "acc": 51455150.77752096
         },
         "tradingVolume": {
-          "usd": 6688121.417597931
+          "usd": 6684674.637009569
         },
         "underlyingInterestApy": 0.12954883080402113,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.12954883080402113,
-        "impliedApy": 0.3421623265674816,
-        "ytFloatingApy": -0.9806069644945337,
-        "swapFeeApy": 0.012522448570007505,
-        "voterApy": 0.15993534449526273,
-        "ptDiscount": 0.0626519416712058,
-        "pendleApy": 0.08236699761398754,
+        "impliedApy": 0.3420771558141551,
+        "ytFloatingApy": -0.9806024763087029,
+        "swapFeeApy": 0.012524799876806103,
+        "voterApy": 0.15963805918960425,
+        "ptDiscount": 0.06262836916298675,
+        "pendleApy": 0.08248819117060445,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.2924482003256645,
-        "maxBoostedApy": 0.4159986967466458,
+        "aggregatedApy": 0.2925135183591821,
+        "maxBoostedApy": 0.4162458051150888,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5164,16 +5290,16 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 2735.6143576837376
           }
         ],
-        "totalPt": 17559247.662262216,
-        "totalSy": 33108428.009332307,
+        "totalPt": 17550946.16199798,
+        "totalSy": 33115793.363571055,
         "totalLp": 25770224.834147483,
         "totalActiveSupply": 12750796.329418179
       }
@@ -5182,6 +5308,7 @@
       "address": "0x99b633a6a2e0d6414e7c7ecea1134c0a330a73fe",
       "name": "uniBTC (Corn)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-02-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5192,17 +5319,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 628.443546694748
         }
       ],
       "formatted": {
+        "expiry": "February 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$84,244,014",
+          "usd": "$84,189,611",
           "acc": "$864"
         },
         "tradingVolume": {
@@ -5235,23 +5363,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "628.44",
-            "usdValue": "$3,291"
+            "usdValue": "$3,303"
           }
         ]
       },
       "raw": {
         "address": "0x99b633a6a2e0d6414e7c7ecea1134c0a330a73fe",
         "name": "uniBTC (Corn)",
+        "expiry": "2025-02-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 84244014.2851059,
-          "acc": 864.2759890131995
+          "usd": 84189610.59980586,
+          "acc": 864.2761660829507
         },
         "tradingVolume": {
           "usd": 6377.99656870072
@@ -5259,16 +5388,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.06157892927847963,
+        "impliedApy": 0.061579097947737305,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.00005980016538265076,
-        "voterApy": 0.005715344331271695,
-        "ptDiscount": 0.008517484257782204,
-        "pendleApy": 0.0142539992041668,
+        "swapFeeApy": 0.00005980015313244991,
+        "voterApy": 0.005713566566078862,
+        "ptDiscount": 0.008515815923554326,
+        "pendleApy": 0.01425843138725044,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.021811464896334266,
-        "maxBoostedApy": 0.04319246370258447,
+        "aggregatedApy": 0.021815928683832635,
+        "maxBoostedApy": 0.04320357576470829,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5279,9 +5408,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 628.443546694748
@@ -5297,6 +5426,7 @@
       "address": "0xc118635bcde024c5b01c6be2b0569a2608a8032c",
       "name": "LBTC (Corn)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-02-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5307,17 +5437,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 67.19503988076106
         }
       ],
       "formatted": {
+        "expiry": "February 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$19,230,640",
+          "usd": "$19,227,382",
           "acc": "$197"
         },
         "tradingVolume": {
@@ -5329,13 +5460,13 @@
         "impliedApy": "8.94%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "0.60%",
-        "voterApy": "38.35%",
+        "voterApy": "38.29%",
         "ptDiscount": "1.22%",
         "pendleApy": "0.65%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "3.23%",
-        "maxBoostedApy": "4.20%",
+        "maxBoostedApy": "4.21%",
         "totalPt": "44.23",
         "totalSy": "153.28",
         "totalLp": "0",
@@ -5350,23 +5481,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "67.2",
-            "usdValue": "$352"
+            "usdValue": "$353"
           }
         ]
       },
       "raw": {
         "address": "0xc118635bcde024c5b01c6be2b0569a2608a8032c",
         "name": "LBTC (Corn)",
+        "expiry": "2025-02-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 19230639.663234103,
-          "acc": 196.96607658161264
+          "usd": 19227382.37553272,
+          "acc": 196.966218984077
         },
         "tradingVolume": {
           "usd": 715862.4294209395
@@ -5374,16 +5506,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.08943335257701457,
+        "impliedApy": 0.08943335258251084,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.005992185841062314,
-        "voterApy": 0.3834512905404965,
-        "ptDiscount": 0.012186765126131927,
-        "pendleApy": 0.006480556406326559,
+        "swapFeeApy": 0.005992181496129678,
+        "voterApy": 0.38287712643273697,
+        "ptDiscount": 0.012183545417992048,
+        "pendleApy": 0.006490269982936537,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.03231010419534508,
-        "maxBoostedApy": 0.042030938804834925,
+        "aggregatedApy": 0.032319863744689876,
+        "maxBoostedApy": 0.04205526871909468,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5394,9 +5526,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 67.19503988076106
@@ -5412,6 +5544,7 @@
       "address": "0xe6b03f3182692db1ed7d3a91f6fadf3e4dff2b95",
       "name": "SolvBTC.BBN (Corn)",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-02-27T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5422,17 +5555,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 698.1283910412486
         }
       ],
       "formatted": {
+        "expiry": "February 27, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$55,880,623",
+          "usd": "$55,812,150",
           "acc": "$577"
         },
         "tradingVolume": {
@@ -5444,13 +5578,13 @@
         "impliedApy": "9.98%",
         "ytFloatingApy": "-100.00%",
         "swapFeeApy": "0.15%",
-        "voterApy": "5.22%",
+        "voterApy": "5.21%",
         "ptDiscount": "1.35%",
-        "pendleApy": "1.81%",
+        "pendleApy": "1.82%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "4.75%",
-        "maxBoostedApy": "7.47%",
+        "maxBoostedApy": "7.48%",
         "totalPt": "163.5",
         "totalSy": "415.71",
         "totalLp": "0",
@@ -5465,23 +5599,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "698.13",
-            "usdValue": "$3,656"
+            "usdValue": "$3,669"
           }
         ]
       },
       "raw": {
         "address": "0xe6b03f3182692db1ed7d3a91f6fadf3e4dff2b95",
         "name": "SolvBTC.BBN (Corn)",
+        "expiry": "2025-02-27T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 55880622.96394682,
-          "acc": 576.9988698670293
+          "usd": 55812150.056006916,
+          "acc": 576.9994537993902
         },
         "tradingVolume": {
           "usd": 855811.0523838518
@@ -5489,16 +5624,16 @@
         "underlyingInterestApy": 0,
         "underlyingRewardApy": 0,
         "underlyingApy": 0,
-        "impliedApy": 0.09981651941163494,
+        "impliedApy": 0.09981651941779868,
         "ytFloatingApy": -1,
-        "swapFeeApy": 0.0014585759329015513,
-        "voterApy": 0.05222041269881535,
-        "ptDiscount": 0.013527150435377444,
-        "pendleApy": 0.018133882821682823,
+        "swapFeeApy": 0.001458574455749151,
+        "voterApy": 0.052087135400226754,
+        "ptDiscount": 0.01352357903142598,
+        "pendleApy": 0.018180264266157608,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.0474945121552328,
-        "maxBoostedApy": 0.07469533638775704,
+        "aggregatedApy": 0.04754096490282873,
+        "maxBoostedApy": 0.07481136130206514,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5509,9 +5644,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 698.1283910412486
@@ -5527,6 +5662,7 @@
       "address": "0x9e612ff1902c5feea4fd69eb236375d5299e0ffc",
       "name": "weETHk",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5537,17 +5673,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 129.7081854714869
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$4,275,237",
+          "usd": "$4,279,331",
           "acc": "$1,182"
         },
         "tradingVolume": {
@@ -5561,11 +5698,11 @@
         "swapFeeApy": "0.16%",
         "voterApy": "0.99%",
         "ptDiscount": "1.97%",
-        "pendleApy": "5.15%",
+        "pendleApy": "5.16%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
-        "aggregatedApy": "8.28%",
-        "maxBoostedApy": "16.00%",
+        "aggregatedApy": "8.29%",
+        "maxBoostedApy": "16.03%",
         "totalPt": "145.73",
         "totalSy": "1,024.6",
         "totalLp": "594.09",
@@ -5580,23 +5717,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "129.71",
-            "usdValue": "$679"
+            "usdValue": "$682"
           }
         ]
       },
       "raw": {
         "address": "0x9e612ff1902c5feea4fd69eb236375d5299e0ffc",
         "name": "weETHk",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 4275237.359494719,
-          "acc": 1181.9429943500836
+          "usd": 4279330.555084927,
+          "acc": 1181.9431668990167
         },
         "tradingVolume": {
           "usd": 5235.919748442271
@@ -5604,16 +5742,16 @@
         "underlyingInterestApy": 0.02781240724417766,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.02781240724417766,
-        "impliedApy": 0.04322972279353654,
-        "ytFloatingApy": -0.6148677154964726,
-        "swapFeeApy": 0.0016478126515135916,
-        "voterApy": 0.009904353025152269,
-        "ptDiscount": 0.0196599639268612,
-        "pendleApy": 0.05148553450054495,
+        "impliedApy": 0.04322972279371817,
+        "ytFloatingApy": -0.6148908857354549,
+        "swapFeeApy": 0.001647812410753291,
+        "voterApy": 0.009885557582028458,
+        "ptDiscount": 0.01965877986896436,
+        "pendleApy": 0.05158341658598464,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.08280924972689363,
-        "maxBoostedApy": 0.16003755147771104,
+        "aggregatedApy": 0.08290713355028335,
+        "maxBoostedApy": 0.1602822584292603,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5624,9 +5762,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 129.7081854714869
@@ -5642,6 +5780,7 @@
       "address": "0xcba3b226ca62e666042cb4a1e6e4681053885f75",
       "name": "weETHs",
       "timestamp": "2025-01-05T18:00:00.000Z",
+      "expiry": "2025-06-26T00:00:00.000Z",
       "estimatedDailyPoolRewards": [
         {
           "asset": {
@@ -5652,17 +5791,18 @@
             "decimals": 18,
             "accentColor": null,
             "price": {
-              "usd": 5.23620903
+              "usd": 5.25596782
             },
-            "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+            "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
             "name": "PENDLE"
           },
           "amount": 141.57117393750994
         }
       ],
       "formatted": {
+        "expiry": "June 26, 2025 at 12:00 AM UTC",
         "liquidity": {
-          "usd": "$15,424,105",
+          "usd": "$15,397,611",
           "acc": "$4,263"
         },
         "tradingVolume": {
@@ -5674,13 +5814,13 @@
         "impliedApy": "4.20%",
         "ytFloatingApy": "-59.20%",
         "swapFeeApy": "0.52%",
-        "voterApy": "4.25%",
+        "voterApy": "4.24%",
         "ptDiscount": "1.91%",
         "pendleApy": "1.71%",
         "arbApy": "0.00%",
         "lpRewardApy": "0.00%",
         "aggregatedApy": "5.18%",
-        "maxBoostedApy": "7.74%",
+        "maxBoostedApy": "7.75%",
         "totalPt": "504.6",
         "totalSy": "3,713.25",
         "totalLp": "2,145.94",
@@ -5695,23 +5835,24 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": "141.57",
-            "usdValue": "$741"
+            "usdValue": "$744"
           }
         ]
       },
       "raw": {
         "address": "0xcba3b226ca62e666042cb4a1e6e4681053885f75",
         "name": "weETHs",
+        "expiry": "2025-06-26T00:00:00.000Z",
         "timestamp": "2025-01-05T18:00:00.000Z",
         "liquidity": {
-          "usd": 15424104.988930857,
-          "acc": 4263.145290974991
+          "usd": 15397611.303402718,
+          "acc": 4263.145864867457
         },
         "tradingVolume": {
           "usd": 17408.426201348615
@@ -5719,16 +5860,16 @@
         "underlyingInterestApy": 0.027810817149218403,
         "underlyingRewardApy": 0,
         "underlyingApy": 0.027810817149218403,
-        "impliedApy": 0.04203778419480919,
-        "ytFloatingApy": -0.591997001492239,
-        "swapFeeApy": 0.005198647968985615,
-        "voterApy": 0.042488826606417104,
-        "ptDiscount": 0.0191342468245983,
-        "pendleApy": 0.017110261544065496,
+        "impliedApy": 0.04203781899820913,
+        "ytFloatingApy": -0.5920208001192632,
+        "swapFeeApy": 0.005198647267374845,
+        "voterApy": 0.04243005462631423,
+        "ptDiscount": 0.01913310950230407,
+        "pendleApy": 0.01713395951226059,
         "arbApy": 0,
         "lpRewardApy": 0,
-        "aggregatedApy": 0.05177145543264152,
-        "maxBoostedApy": 0.07743684774873977,
+        "aggregatedApy": 0.05179515843269314,
+        "maxBoostedApy": 0.07749609770108402,
         "estimatedDailyPoolRewards": [
           {
             "asset": {
@@ -5739,9 +5880,9 @@
               "decimals": 18,
               "accentColor": null,
               "price": {
-                "usd": 5.23620903
+                "usd": 5.25596782
               },
-              "priceUpdatedAt": "2025-01-05T18:06:15.003Z",
+              "priceUpdatedAt": "2025-01-05T18:22:45.003Z",
               "name": "PENDLE"
             },
             "amount": 141.57117393750994

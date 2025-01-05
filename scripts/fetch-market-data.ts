@@ -50,6 +50,7 @@ interface MarketData {
   address: string;
   name: string;
   timestamp: string;
+  expiry: string;
   liquidity: {
     usd: number;
     acc: number;
@@ -81,8 +82,10 @@ interface FormattedMarketData {
   address: string;
   name: string;
   timestamp: string;
+  expiry: string;
   estimatedDailyPoolRewards: DailyPoolReward[];
   formatted: {
+    expiry: string;
     liquidity: {
       usd: string;
       acc: string;
@@ -116,8 +119,22 @@ interface FormattedMarketData {
   raw: MarketData;
 }
 
+function formatDate(dateString: string): string {
+  return (
+    new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "UTC",
+    }) + " UTC"
+  );
+}
+
 function formatMarketData(data: MarketData): FormattedMarketData {
   const formatted = {
+    expiry: formatDate(data.expiry),
     liquidity: {
       usd: formatUSD(data.liquidity.usd),
       acc: formatUSD(data.liquidity.acc),
@@ -153,6 +170,7 @@ function formatMarketData(data: MarketData): FormattedMarketData {
     address: data.address,
     name: data.name,
     timestamp: data.timestamp,
+    expiry: data.expiry,
     estimatedDailyPoolRewards: data.estimatedDailyPoolRewards,
     formatted,
     raw: data,
@@ -167,13 +185,17 @@ async function ensureDirectoryExists(dirPath: string) {
   }
 }
 
-async function fetchMarketData(address: string): Promise<MarketData | null> {
+async function fetchMarketData(
+  address: string,
+  expiry: string,
+): Promise<MarketData | null> {
   try {
     const url = `https://api-v2.pendle.finance/core/v2/1/markets/${address}/data`;
     const response = await axios.get(url);
     return {
       address,
       name: "", // We'll fill this from the active markets data
+      expiry,
       ...response.data,
     };
   } catch (error) {
@@ -194,7 +216,7 @@ async function fetchAllMarketData() {
     console.log("Fetching detailed data for each market...");
     const marketDataPromises = activeMarkets.data.markets.map(
       async (market: any) => {
-        const data = await fetchMarketData(market.address);
+        const data = await fetchMarketData(market.address, market.expiry);
         if (data) {
           data.name = market.name;
           return formatMarketData(data);
@@ -226,6 +248,7 @@ async function fetchAllMarketData() {
     console.log("\nMarket APYs:");
     validResults.forEach((market) => {
       console.log(`- ${market.name} (${market.address}):`);
+      console.log(`  Expiry: ${market.formatted.expiry}`);
       console.log(`  Underlying APY: ${market.formatted.underlyingApy}`);
       console.log(`  Implied APY: ${market.formatted.impliedApy}`);
       console.log(`  Aggregated APY: ${market.formatted.aggregatedApy}`);
