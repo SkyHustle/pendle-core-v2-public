@@ -48,6 +48,8 @@
     "@chainlink/contracts": "^0.8.0",
     "@openzeppelin/contracts": "4.9.3",
     "@openzeppelin/contracts-upgradeable": "4.9.3",
+    "@types/axios": "^0.14.4",
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "ethers": "^6.13.4"
   }
