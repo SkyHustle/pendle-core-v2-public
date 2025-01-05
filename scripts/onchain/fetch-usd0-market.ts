@@ -83,7 +83,7 @@ interface MarketDetails {
   syExchangeRate: string;
   rewardTokens: string[];
   creationBlock?: number;
-  rates: {
+  rates?: {
     timestamp: number;
     lnImpliedRate: string;
   }[];
@@ -174,25 +174,11 @@ async function getMarketDetails(
     );
   }
 
-  // Fetch historical rates
+  // Remove the historical rates fetching code
   const rates: Array<{
     timestamp: number;
     lnImpliedRate: string;
   }> = [];
-  try {
-    // Get rates from now and 7 days ago
-    const secondsAgo = [0, 7 * 24 * 60 * 60];
-    const lnRates = await market.observe(secondsAgo);
-
-    for (let i = 0; i < secondsAgo.length; i++) {
-      rates.push({
-        timestamp: block.timestamp - secondsAgo[i],
-        lnImpliedRate: lnRates[i].toString(),
-      });
-    }
-  } catch (error) {
-    console.warn("Could not fetch historical rates:", error);
-  }
 
   // Try to get creation block
   let creationBlock;
@@ -284,7 +270,10 @@ async function getMarketDetails(
   };
 }
 
-function formatMarketData(market: MarketDetails) {
+async function formatMarketData(
+  market: MarketDetails,
+  provider: ethers.Provider,
+) {
   const formatDate = (timestamp: number) => {
     return new Date(timestamp * 1000).toLocaleString("en-US", {
       year: "numeric",
@@ -435,6 +424,25 @@ function formatMarketData(market: MarketDetails) {
     }
   };
 
+  // Get reward token symbols using the provided provider
+  const rewardTokenSymbols = await Promise.all(
+    market.rewardTokens.map(async (address) => {
+      const contract = new ethers.Contract(address, TOKEN_ABI, provider);
+      try {
+        const symbol = await contract.symbol();
+        return {
+          address,
+          symbol,
+        };
+      } catch (error) {
+        return {
+          address,
+          symbol: "UNKNOWN",
+        };
+      }
+    }),
+  );
+
   const ytBalance = calculateYtBalance(
     market.state.totalPt,
     market.state.totalSy,
@@ -496,7 +504,7 @@ function formatMarketData(market: MarketDetails) {
           )
         : "Unknown",
     },
-    rewardTokens: market.rewardTokens,
+    rewardTokens: rewardTokenSymbols,
     timestamp: formatDate(market.timestamp),
     blockNumber: market.blockNumber,
   };
@@ -511,7 +519,7 @@ async function main() {
   console.log("\nFetching USD0++ market data...");
 
   const marketDetails = await getMarketDetails(USD0_MARKET_ADDRESS, provider);
-  const formattedData = formatMarketData(marketDetails);
+  const formattedData = await formatMarketData(marketDetails, provider);
 
   const outputPath = path.join("data", "onchain", "usd0-market-details.json");
 
@@ -549,7 +557,11 @@ async function main() {
   console.log(`Utilization Rate: ${formattedData.metrics.utilizationRate}`);
   console.log(`Reserve Fee: ${formattedData.metrics.reserveFeePercent}`);
   if (formattedData.rewardTokens.length > 0) {
-    console.log(`Reward Tokens: ${formattedData.rewardTokens.join(", ")}`);
+    console.log(
+      `Reward Tokens: ${formattedData.rewardTokens
+        .map((token) => `${token.symbol} (${token.address})`)
+        .join(", ")}`,
+    );
   }
 }
 
