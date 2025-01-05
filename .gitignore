@@ -37,3 +37,8 @@ draft/
 .npmrc
 
 deployments/**/*.ts
+
+# Generated market data
+data/onchain/*.json
+data/analysis/*.json
+data/api/*.json
