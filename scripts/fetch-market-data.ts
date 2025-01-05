@@ -6,6 +6,27 @@ const ACTIVE_MARKETS_FILE = path.join("data", "active-markets.json");
 const OUTPUT_DIR = "data";
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "market-details.json");
 
+// Utility functions for number formatting
+function formatPercent(value: number): string {
+  return `${(value * 100).toFixed(2)}%`;
+}
+
+function formatUSD(value: number): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function formatNumber(value: number, decimals: number = 2): string {
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: decimals,
+  }).format(value);
+}
+
 interface Asset {
   id: string;
   chainId: number;
@@ -56,6 +77,88 @@ interface MarketData {
   totalActiveSupply: number;
 }
 
+interface FormattedMarketData {
+  address: string;
+  name: string;
+  timestamp: string;
+  estimatedDailyPoolRewards: DailyPoolReward[];
+  formatted: {
+    liquidity: {
+      usd: string;
+      acc: string;
+    };
+    tradingVolume: {
+      usd: string;
+    };
+    underlyingInterestApy: string;
+    underlyingRewardApy: string;
+    underlyingApy: string;
+    impliedApy: string;
+    ytFloatingApy: string;
+    swapFeeApy: string;
+    voterApy: string;
+    ptDiscount: string;
+    pendleApy: string;
+    arbApy: string;
+    lpRewardApy: string;
+    aggregatedApy: string;
+    maxBoostedApy: string;
+    totalPt: string;
+    totalSy: string;
+    totalLp: string;
+    totalActiveSupply: string;
+    estimatedDailyPoolRewards: {
+      asset: Asset;
+      amount: string;
+      usdValue: string;
+    }[];
+  };
+  raw: MarketData;
+}
+
+function formatMarketData(data: MarketData): FormattedMarketData {
+  const formatted = {
+    liquidity: {
+      usd: formatUSD(data.liquidity.usd),
+      acc: formatUSD(data.liquidity.acc),
+    },
+    tradingVolume: {
+      usd: formatUSD(data.tradingVolume.usd),
+    },
+    underlyingInterestApy: formatPercent(data.underlyingInterestApy),
+    underlyingRewardApy: formatPercent(data.underlyingRewardApy),
+    underlyingApy: formatPercent(data.underlyingApy),
+    impliedApy: formatPercent(data.impliedApy),
+    ytFloatingApy: formatPercent(data.ytFloatingApy),
+    swapFeeApy: formatPercent(data.swapFeeApy),
+    voterApy: formatPercent(data.voterApy),
+    ptDiscount: formatPercent(data.ptDiscount),
+    pendleApy: formatPercent(data.pendleApy),
+    arbApy: formatPercent(data.arbApy),
+    lpRewardApy: formatPercent(data.lpRewardApy),
+    aggregatedApy: formatPercent(data.aggregatedApy),
+    maxBoostedApy: formatPercent(data.maxBoostedApy),
+    totalPt: formatNumber(data.totalPt),
+    totalSy: formatNumber(data.totalSy),
+    totalLp: formatNumber(data.totalLp),
+    totalActiveSupply: formatNumber(data.totalActiveSupply),
+    estimatedDailyPoolRewards: data.estimatedDailyPoolRewards.map((reward) => ({
+      asset: reward.asset,
+      amount: formatNumber(reward.amount),
+      usdValue: formatUSD(reward.amount * reward.asset.price.usd),
+    })),
+  };
+
+  return {
+    address: data.address,
+    name: data.name,
+    timestamp: data.timestamp,
+    estimatedDailyPoolRewards: data.estimatedDailyPoolRewards,
+    formatted,
+    raw: data,
+  };
+}
+
 async function ensureDirectoryExists(dirPath: string) {
   try {
     await fs.access(dirPath);
@@ -94,14 +197,15 @@ async function fetchAllMarketData() {
         const data = await fetchMarketData(market.address);
         if (data) {
           data.name = market.name;
+          return formatMarketData(data);
         }
-        return data;
+        return null;
       },
     );
 
     const results = await Promise.all(marketDataPromises);
     const validResults = results.filter(
-      (result): result is MarketData => result !== null,
+      (result): result is FormattedMarketData => result !== null,
     );
 
     const output = {
@@ -122,16 +226,18 @@ async function fetchAllMarketData() {
     console.log("\nMarket APYs:");
     validResults.forEach((market) => {
       console.log(`- ${market.name} (${market.address}):`);
-      console.log(
-        `  Underlying APY: ${(market.underlyingApy * 100).toFixed(2)}%`,
-      );
-      console.log(`  Implied APY: ${(market.impliedApy * 100).toFixed(2)}%`);
-      console.log(
-        `  Aggregated APY: ${(market.aggregatedApy * 100).toFixed(2)}%`,
-      );
-      console.log(
-        `  Liquidity: $${Math.round(market.liquidity.usd).toLocaleString()}`,
-      );
+      console.log(`  Underlying APY: ${market.formatted.underlyingApy}`);
+      console.log(`  Implied APY: ${market.formatted.impliedApy}`);
+      console.log(`  Aggregated APY: ${market.formatted.aggregatedApy}`);
+      console.log(`  Liquidity: ${market.formatted.liquidity.usd}`);
+      console.log(`  Trading Volume: ${market.formatted.tradingVolume.usd}`);
+      console.log(`  PT Discount: ${market.formatted.ptDiscount}`);
+      if (market.formatted.estimatedDailyPoolRewards.length > 0) {
+        const reward = market.formatted.estimatedDailyPoolRewards[0];
+        console.log(
+          `  Daily PENDLE Rewards: ${reward.amount} (${reward.usdValue})`,
+        );
+      }
       console.log();
     });
   } catch (error) {
