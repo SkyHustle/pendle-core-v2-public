@@ -83,6 +83,7 @@ interface MarketDetails {
   syExchangeRate: string;
   rewardTokens: string[];
   creationBlock?: number;
+  creationTimestamp?: number;
   rates?: {
     timestamp: number;
     lnImpliedRate: string;
@@ -180,8 +181,9 @@ async function getMarketDetails(
     lnImpliedRate: string;
   }> = [];
 
-  // Try to get creation block
+  // Try to get creation block and its timestamp
   let creationBlock;
+  let creationTimestamp;
   try {
     const code = await provider.getCode(marketAddress);
     if (code !== "0x") {
@@ -193,6 +195,8 @@ async function getMarketDetails(
       const events = await provider.getLogs(filter);
       if (events.length > 0) {
         creationBlock = events[0].blockNumber;
+        const creationBlockData = await provider.getBlock(creationBlock);
+        creationTimestamp = creationBlockData?.timestamp;
       }
     }
   } catch (error) {
@@ -255,6 +259,7 @@ async function getMarketDetails(
     syExchangeRate: currentExchangeRate.toString(),
     rewardTokens,
     creationBlock,
+    creationTimestamp,
     rates,
     exchangeRates: {
       current: currentExchangeRate.toString(),
@@ -469,7 +474,9 @@ async function formatMarketData(
       market.state.expiry,
       market.timestamp,
     ),
-    createdAt: market.creationBlock ? formatDate(market.timestamp) : "Unknown",
+    createdAt: market.creationTimestamp
+      ? formatDate(market.creationTimestamp)
+      : "Unknown",
     balances: {
       sy: formatBigNumber(market.state.totalSy),
       pt: formatBigNumber(market.state.totalPt),
