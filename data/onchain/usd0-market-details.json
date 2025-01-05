@@ -1,0 +1,35 @@
+{
+  "source": "on-chain",
+  "factory": "0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050",
+  "fetchTimestamp": "Jan 5, 2025, 1:44 PM MST",
+  "market": {
+    "address": "0x048680F64d6DFf1748ba6D9a01F578433787e24B",
+    "tokens": {
+      "sy": {
+        "address": "0x52453825c287dDef62D647ce51C0979D27c461f7",
+        "symbol": "SY-USD0++"
+      },
+      "pt": {
+        "address": "0xf696FE29Ef85E892b5926313897D178288faA07e",
+        "symbol": "PT-USD0++-26JUN2025"
+      },
+      "yt": {
+        "address": "0xEAD01319c2aB0dC2C690EfF5DfC5f465Cd38FC87",
+        "symbol": "YT-USD0++-26JUN2025"
+      }
+    },
+    "expiry": "Jun 25, 2025, 6:00 PM MDT",
+    "balances": {
+      "sy": "4,500,560.472255",
+      "pt": "13,173,181.90657",
+      "lp": "8,482,487.01486"
+    },
+    "metrics": {
+      "scalarRoot": "25.840345",
+      "impliedApy": "20.70%",
+      "reserveFeePercent": "80%"
+    },
+    "timestamp": "Jan 5, 2025, 1:44 PM MST",
+    "blockNumber": 21560746
+  }
+}
