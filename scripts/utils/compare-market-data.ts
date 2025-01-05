@@ -49,10 +49,13 @@ function formatDate(timestamp: number): string {
 async function main() {
   // Read the JSON files
   const onchainData: OnChainData = JSON.parse(
-    fs.readFileSync(path.join("data", "onchain-active-markets.json"), "utf-8"),
+    fs.readFileSync(
+      path.join("data", "onchain", "onchain-active-markets.json"),
+      "utf-8",
+    ),
   );
   const apiData: ApiData = JSON.parse(
-    fs.readFileSync(path.join("data", "active-markets.json"), "utf-8"),
+    fs.readFileSync(path.join("data", "api", "active-markets.json"), "utf-8"),
   );
 
   // Normalize addresses for comparison
@@ -130,7 +133,7 @@ async function main() {
     },
   };
 
-  const outputPath = path.join("data", "market-comparison.json");
+  const outputPath = path.join("data", "analysis", "market-comparison.json");
   fs.writeFileSync(outputPath, JSON.stringify(comparisonData, null, 2));
   console.log(`\nSaved detailed comparison to ${outputPath}`);
 }
