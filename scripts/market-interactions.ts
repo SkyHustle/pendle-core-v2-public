@@ -1,15 +1,15 @@
 import { ethers } from "ethers";
 import * as dotenv from "dotenv";
+import * as fs from "fs";
+import * as path from "path";
 
 // Load environment variables from .env file
 dotenv.config();
 
-// Market Factory addresses on Ethereum mainnet
-const MARKET_FACTORIES = {
-  V3: ethers.getAddress("0x1A6fCc85557BC4fB7B534ed835a03EF056552D52"),
-  V4: ethers.getAddress("0x3d75Bd20C983edb5fD218A1b7e0024F1056c7A2F"),
-  V5: ethers.getAddress("0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050"),
-} as const;
+// Market Factory address on Ethereum mainnet
+const MARKET_FACTORY_V5 = ethers.getAddress(
+  "0x6fcf753f2C67b83f7B09746Bbc4FA0047b35D050",
+);
 
 // ABI for the market factory
 const MARKET_FACTORY_ABI = [
@@ -58,22 +58,20 @@ const TOKEN_ABI = [
 
 interface MarketInfo {
   address: string;
-  factory: keyof typeof MARKET_FACTORIES;
   sySymbol: string;
   ptSymbol: string;
   ytSymbol: string;
   expiry: number;
-  totalLpSupply: bigint;
+  totalLpSupply: string; // Changed to string for JSON compatibility
+  timestamp: number; // Added timestamp for when the data was fetched
+  blockNumber: number; // Added block number for reference
 }
 
 async function findValidNonExpiredMarkets(
   marketFactory: ethers.Contract,
   provider: ethers.Provider,
-  factoryVersion: keyof typeof MARKET_FACTORIES,
 ): Promise<MarketInfo[]> {
-  console.log(
-    `\nLooking for CreateNewMarket events in the past 181 days for factory ${factoryVersion}...`,
-  );
+  console.log("\nLooking for CreateNewMarket events in the past 181 days...");
 
   const currentBlock = await provider.getBlockNumber();
   const currentBlockData = await provider.getBlock(currentBlock);
@@ -94,9 +92,7 @@ async function findValidNonExpiredMarkets(
     currentBlock,
   );
 
-  console.log(
-    `Found ${events.length} market creation events for ${factoryVersion}\n`,
-  );
+  console.log(`Found ${events.length} market creation events\n`);
 
   const validMarkets: MarketInfo[] = [];
 
@@ -138,12 +134,13 @@ async function findValidNonExpiredMarkets(
 
           validMarkets.push({
             address: marketAddress,
-            factory: factoryVersion,
             sySymbol,
             ptSymbol,
             ytSymbol,
             expiry,
-            totalLpSupply,
+            totalLpSupply: totalLpSupply.toString(),
+            timestamp: currentTimestamp,
+            blockNumber: currentBlock,
           });
         } catch (error) {
           console.log(`Error fetching market details: ${error}\n`);
@@ -192,60 +189,44 @@ async function main() {
     throw error;
   }
 
-  const allMarkets: MarketInfo[] = [];
-
-  // Check each factory version
-  for (const [version, address] of Object.entries(MARKET_FACTORIES)) {
-    const marketFactory = new ethers.Contract(
-      address,
-      MARKET_FACTORY_ABI,
-      provider,
-    );
-
-    const markets = await findValidNonExpiredMarkets(
-      marketFactory,
-      provider,
-      version as keyof typeof MARKET_FACTORIES,
-    );
-    allMarkets.push(...markets);
-  }
-
-  // Sort markets by expiry date
-  allMarkets.sort((a, b) => a.expiry - b.expiry);
-
-  console.log("\n=== Summary of All Valid Non-Expired Markets ===");
-  console.log(`Total markets found: ${allMarkets.length}\n`);
-
-  // Group markets by factory version
-  const marketsByFactory = allMarkets.reduce(
-    (acc, market) => {
-      if (!acc[market.factory]) {
-        acc[market.factory] = [];
-      }
-      acc[market.factory].push(market);
-      return acc;
-    },
-    {} as Record<keyof typeof MARKET_FACTORIES, MarketInfo[]>,
+  const marketFactory = new ethers.Contract(
+    MARKET_FACTORY_V5,
+    MARKET_FACTORY_ABI,
+    provider,
   );
 
-  // Print summary by factory version
-  for (const [version, markets] of Object.entries(marketsByFactory)) {
-    if (markets.length > 0) {
-      console.log(`\n${version} Markets (${markets.length} total):`);
-      markets.forEach((market, index) => {
-        console.log(`\n${index + 1}. Market: ${market.address}`);
-        console.log(
-          `   Tokens: SY=${market.sySymbol}, PT=${market.ptSymbol}, YT=${market.ytSymbol}`,
-        );
-        console.log(
-          `   Expiry: ${new Date(market.expiry * 1000).toLocaleString()}`,
-        );
-        console.log(
-          `   Total LP Supply: ${ethers.formatEther(market.totalLpSupply)}`,
-        );
-      });
-    }
-  }
+  const markets = await findValidNonExpiredMarkets(marketFactory, provider);
+
+  // Sort markets by expiry date
+  markets.sort((a, b) => a.expiry - b.expiry);
+
+  console.log("\n=== Summary of Valid Non-Expired Markets ===");
+  console.log(`Total markets found: ${markets.length}\n`);
+
+  markets.forEach((market, index) => {
+    console.log(`\n${index + 1}. Market: ${market.address}`);
+    console.log(
+      `   Tokens: SY=${market.sySymbol}, PT=${market.ptSymbol}, YT=${market.ytSymbol}`,
+    );
+    console.log(
+      `   Expiry: ${new Date(market.expiry * 1000).toLocaleString()}`,
+    );
+    console.log(
+      `   Total LP Supply: ${ethers.formatEther(market.totalLpSupply)}`,
+    );
+  });
+
+  // Save to JSON file
+  const outputData = {
+    source: "on-chain",
+    factory: MARKET_FACTORY_V5,
+    fetchTimestamp: Math.floor(Date.now() / 1000),
+    markets,
+  };
+
+  const outputPath = path.join("data", "onchain-active-markets.json");
+  fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2));
+  console.log(`\nSaved market data to ${outputPath}`);
 }
 
 main()
