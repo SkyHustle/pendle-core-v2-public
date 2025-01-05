@@ -340,12 +340,22 @@ async function formatMarketData(
     return yt.toString();
   };
 
-  // Calculate TVL in USD (assuming USD0++ is roughly $1)
-  const calculateTvl = (totalSy: string, syExchangeRate: string) => {
+  // Calculate TVL in USD (total value of SY + PT + YT + LP)
+  const calculateTvl = (
+    totalSy: string,
+    totalPt: string,
+    totalLp: string,
+    syExchangeRate: string,
+  ) => {
     const sy = BigInt(totalSy);
+    const pt = BigInt(totalPt);
+    const yt = BigInt(calculateYtBalance(totalPt, totalSy));
+    const lp = BigInt(totalLp);
     const rate = BigInt(syExchangeRate);
-    const tvl = (sy * rate) / BigInt(1e18); // Adjust for decimals
-    return ethers.formatEther(tvl);
+
+    // Total value is the sum of all tokens, each adjusted by the exchange rate
+    const totalValue = ((sy + pt + yt + lp) * rate) / BigInt(1e18);
+    return ethers.formatEther(totalValue);
   };
 
   // Calculate maturity progress
@@ -496,7 +506,12 @@ async function formatMarketData(
       tvl:
         "$" +
         Number(
-          calculateTvl(market.state.totalSy, market.syExchangeRate),
+          calculateTvl(
+            market.state.totalSy,
+            market.state.totalPt,
+            market.state.totalLp,
+            market.syExchangeRate,
+          ),
         ).toLocaleString("en-US", {
           maximumFractionDigits: 2,
         }),
