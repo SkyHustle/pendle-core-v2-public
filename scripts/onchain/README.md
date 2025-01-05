@@ -4,7 +4,7 @@ This directory contains scripts that interact directly with the Ethereum blockch
 
 ## Files
 
-- `market-interactions.ts`: Queries market data directly from Pendle smart contracts
+- `fetch-active-markets.ts`: Queries and lists all valid, non-expired markets directly from Pendle smart contracts
 
 ## Usage
 
