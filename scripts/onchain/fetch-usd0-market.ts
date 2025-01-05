@@ -135,6 +135,50 @@ function formatMarketData(market: MarketDetails) {
     return ((Math.exp(rateNumber) - 1) * 100).toFixed(2) + "%";
   };
 
+  // Calculate time remaining until expiry
+  const calculateTimeRemaining = (expiry: number, now: number) => {
+    const diff = expiry - now;
+    if (diff <= 0) return "Expired";
+
+    const days = Math.floor(diff / (24 * 60 * 60));
+    const months = Math.floor(days / 30);
+    const remainingDays = days % 30;
+
+    return `${months} months, ${remainingDays} days`;
+  };
+
+  // Calculate utilization rate
+  const calculateUtilization = (totalPt: string, totalSy: string) => {
+    const pt = Number(ethers.formatEther(totalPt));
+    const sy = Number(ethers.formatEther(totalSy));
+    if (sy === 0) return "0.00%";
+    return ((pt / sy) * 100).toFixed(2) + "%";
+  };
+
+  // Calculate fee-adjusted APY
+  const calculateFeeAdjustedApy = (
+    lnRate: string,
+    reserveFeePercent: number,
+  ) => {
+    const rateNumber = Number(ethers.formatEther(lnRate));
+    const apy = Math.exp(rateNumber) - 1;
+    const feeAdjustedApy = apy * (1 - reserveFeePercent / 100);
+    return (feeAdjustedApy * 100).toFixed(2) + "%";
+  };
+
+  // Calculate YT balance (PT - SY if positive, otherwise 0)
+  const calculateYtBalance = (totalPt: string, totalSy: string) => {
+    const pt = BigInt(totalPt);
+    const sy = BigInt(totalSy);
+    const yt = pt > sy ? pt - sy : BigInt(0);
+    return yt.toString();
+  };
+
+  const ytBalance = calculateYtBalance(
+    market.state.totalPt,
+    market.state.totalSy,
+  );
+
   return {
     address: market.address,
     tokens: {
@@ -152,14 +196,27 @@ function formatMarketData(market: MarketDetails) {
       },
     },
     expiry: formatDate(market.state.expiry),
+    timeRemaining: calculateTimeRemaining(
+      market.state.expiry,
+      market.timestamp,
+    ),
     balances: {
       sy: formatBigNumber(market.state.totalSy),
       pt: formatBigNumber(market.state.totalPt),
+      yt: formatBigNumber(ytBalance),
       lp: formatBigNumber(market.state.totalLp),
     },
     metrics: {
       scalarRoot: formatBigNumber(market.state.scalarRoot),
       impliedApy: calculateImpliedApy(market.state.lastLnImpliedRate),
+      feeAdjustedApy: calculateFeeAdjustedApy(
+        market.state.lastLnImpliedRate,
+        market.state.reserveFeePercent,
+      ),
+      utilizationRate: calculateUtilization(
+        market.state.totalPt,
+        market.state.totalSy,
+      ),
       reserveFeePercent: market.state.reserveFeePercent + "%",
     },
     timestamp: formatDate(market.timestamp),
@@ -200,11 +257,14 @@ async function main() {
     `Tokens: SY=${formattedData.tokens.sy.symbol}, PT=${formattedData.tokens.pt.symbol}, YT=${formattedData.tokens.yt.symbol}`,
   );
   console.log(`Expiry: ${formattedData.expiry}`);
+  console.log(`Time Remaining: ${formattedData.timeRemaining}`);
   console.log(
-    `Balances: ${formattedData.balances.sy} SY, ${formattedData.balances.pt} PT`,
+    `Balances: ${formattedData.balances.sy} SY, ${formattedData.balances.pt} PT, ${formattedData.balances.yt} YT`,
   );
   console.log(`Total LP Supply: ${formattedData.balances.lp}`);
   console.log(`Implied APY: ${formattedData.metrics.impliedApy}`);
+  console.log(`Fee-Adjusted APY: ${formattedData.metrics.feeAdjustedApy}`);
+  console.log(`Utilization Rate: ${formattedData.metrics.utilizationRate}`);
   console.log(`Reserve Fee: ${formattedData.metrics.reserveFeePercent}`);
 }
 
