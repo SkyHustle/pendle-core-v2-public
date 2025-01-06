@@ -503,6 +503,15 @@ async function formatMarketData(
         market.state.totalSy,
       ),
       reserveFeePercent: market.state.reserveFeePercent + "%",
+      liquidity:
+        "$" +
+        Number(
+          ethers.formatEther(
+            ((BigInt(market.state.totalSy) + BigInt(market.state.totalPt)) *
+              BigInt(market.syExchangeRate)) /
+              BigInt(1e18),
+          ),
+        ).toLocaleString("en-US", { maximumFractionDigits: 2 }),
       tvl:
         "$" +
         Number(
@@ -569,6 +578,16 @@ async function main() {
     `Balances: ${formattedData.balances.sy} SY, ${formattedData.balances.pt} PT, ${formattedData.balances.yt} YT`,
   );
   console.log(`Total LP Supply: ${formattedData.balances.lp}`);
+  console.log(
+    `Liquidity: $${Number(
+      ethers.formatEther(
+        ((BigInt(marketDetails.state.totalSy) +
+          BigInt(marketDetails.state.totalPt)) *
+          BigInt(marketDetails.syExchangeRate)) /
+          BigInt(1e18),
+      ),
+    ).toLocaleString("en-US", { maximumFractionDigits: 2 })}`,
+  );
   console.log(`TVL: ${formattedData.metrics.tvl}`);
   console.log(`YT Yield Rate (7d avg): ${formattedData.metrics.ytYieldRate}`);
   console.log(`Implied APY: ${formattedData.metrics.impliedApy}`);
