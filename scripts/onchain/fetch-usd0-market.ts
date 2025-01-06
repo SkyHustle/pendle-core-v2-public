@@ -460,6 +460,31 @@ async function formatMarketData(
     market.state.totalSy,
   );
 
+  // Calculate YT price in USD
+  const calculateYtPrice = (
+    syExchangeRate: string,
+    lastLnImpliedRate: string,
+  ) => {
+    try {
+      // Get the PT price from the implied rate (discount factor)
+      const rateNumber = Number(ethers.formatEther(lastLnImpliedRate));
+      const timeToExpiry =
+        (market.state.expiry - market.timestamp) / (365 * 24 * 60 * 60); // in years
+      const discountFactor = Math.exp(-rateNumber * timeToExpiry);
+
+      // PT price = discountFactor (since PT will be worth 1 at expiry)
+      const ptPrice = discountFactor;
+
+      // YT price = 1 - PT price (since YT + PT = 1 at expiry)
+      const ytPrice = 1 - ptPrice;
+
+      return `$${ytPrice.toFixed(4)}`;
+    } catch (error) {
+      console.warn("Error calculating YT price:", error);
+      return "N/A";
+    }
+  };
+
   return {
     address: market.address,
     tokens: {
@@ -498,6 +523,10 @@ async function formatMarketData(
         market.state.reserveFeePercent,
       ),
       ytYieldRate: calculateYtYield(market.state.lastLnImpliedRate),
+      ytPrice: calculateYtPrice(
+        market.syExchangeRate,
+        market.state.lastLnImpliedRate,
+      ),
       utilizationRate: calculateUtilization(
         market.state.totalPt,
         market.state.totalSy,
@@ -578,17 +607,9 @@ async function main() {
     `Balances: ${formattedData.balances.sy} SY, ${formattedData.balances.pt} PT, ${formattedData.balances.yt} YT`,
   );
   console.log(`Total LP Supply: ${formattedData.balances.lp}`);
-  console.log(
-    `Liquidity: $${Number(
-      ethers.formatEther(
-        ((BigInt(marketDetails.state.totalSy) +
-          BigInt(marketDetails.state.totalPt)) *
-          BigInt(marketDetails.syExchangeRate)) /
-          BigInt(1e18),
-      ),
-    ).toLocaleString("en-US", { maximumFractionDigits: 2 })}`,
-  );
+  console.log(`Liquidity: ${formattedData.metrics.liquidity}`);
   console.log(`TVL: ${formattedData.metrics.tvl}`);
+  console.log(`YT Price: ${formattedData.metrics.ytPrice}`);
   console.log(`YT Yield Rate (7d avg): ${formattedData.metrics.ytYieldRate}`);
   console.log(`Implied APY: ${formattedData.metrics.impliedApy}`);
   console.log(`Fee-Adjusted APY: ${formattedData.metrics.feeAdjustedApy}`);
