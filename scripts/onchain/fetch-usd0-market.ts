@@ -460,8 +460,8 @@ async function formatMarketData(
     market.state.totalSy,
   );
 
-  // Calculate YT price in USD
-  const calculateYtPrice = (
+  // Calculate YT and PT prices in USD
+  const calculateTokenPrices = (
     syExchangeRate: string,
     lastLnImpliedRate: string,
   ) => {
@@ -478,10 +478,16 @@ async function formatMarketData(
       // YT price = 1 - PT price (since YT + PT = 1 at expiry)
       const ytPrice = 1 - ptPrice;
 
-      return `$${ytPrice.toFixed(4)}`;
+      return {
+        pt: `$${ptPrice.toFixed(4)}`,
+        yt: `$${ytPrice.toFixed(4)}`,
+      };
     } catch (error) {
-      console.warn("Error calculating YT price:", error);
-      return "N/A";
+      console.warn("Error calculating token prices:", error);
+      return {
+        pt: "N/A",
+        yt: "N/A",
+      };
     }
   };
 
@@ -523,10 +529,14 @@ async function formatMarketData(
         market.state.reserveFeePercent,
       ),
       ytYieldRate: calculateYtYield(market.state.lastLnImpliedRate),
-      ytPrice: calculateYtPrice(
+      ytPrice: calculateTokenPrices(
         market.syExchangeRate,
         market.state.lastLnImpliedRate,
-      ),
+      ).yt,
+      ptPrice: calculateTokenPrices(
+        market.syExchangeRate,
+        market.state.lastLnImpliedRate,
+      ).pt,
       utilizationRate: calculateUtilization(
         market.state.totalPt,
         market.state.totalSy,
@@ -610,6 +620,7 @@ async function main() {
   console.log(`Liquidity: ${formattedData.metrics.liquidity}`);
   console.log(`TVL: ${formattedData.metrics.tvl}`);
   console.log(`YT Price: ${formattedData.metrics.ytPrice}`);
+  console.log(`PT Price: ${formattedData.metrics.ptPrice}`);
   console.log(`YT Yield Rate (7d avg): ${formattedData.metrics.ytYieldRate}`);
   console.log(`Implied APY: ${formattedData.metrics.impliedApy}`);
   console.log(`Fee-Adjusted APY: ${formattedData.metrics.feeAdjustedApy}`);
