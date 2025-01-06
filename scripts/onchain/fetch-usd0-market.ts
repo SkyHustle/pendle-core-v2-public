@@ -3,7 +3,6 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 import {
   MARKET_FACTORY_V5,
-  MARKET_FACTORY_ABI,
   TOKEN_ABI,
   connectToProvider,
 } from "./fetch-active-markets";
@@ -13,48 +12,30 @@ dotenv.config();
 
 const USD0_MARKET_ADDRESS = "0x048680F64d6DFf1748ba6D9a01F578433787e24B";
 
-// Updated Market ABI with correct interface
+// Market ABI with only used functions
 const MARKET_ABI = [
-  "function PT() external view returns (address)",
-  "function SY() external view returns (address)",
-  "function YT() external view returns (address)",
-  "function expiry() external view returns (uint256)",
-  "function totalSupply() external view returns (uint256)",
-  "function scalarRoot() external view returns (int256)",
-  "function lnFeeRateRoot() external view returns (uint80)",
-  "function factory() external view returns (address)",
   "function readTokens() external view returns (address _SY, address _PT, address _YT)",
   "function readState(address router) external view returns (tuple(int256 totalPt, int256 totalSy, int256 totalLp, address treasury, int256 scalarRoot, uint256 expiry, uint256 lnFeeRateRoot, uint256 reserveFeePercent, uint256 lastLnImpliedRate))",
   "function getRewardTokens() external view returns (address[] memory)",
-  "function observe(uint256[] memory secondsAgo) external view returns (uint216[] memory lnImpliedRateCumulative)",
 ];
 
-// Add SY Token ABI for fetching underlying APY
+// SY Token ABI with only used functions
 const SY_TOKEN_ABI = [
   "function exchangeRate() external view returns (uint256)",
-  "function assetInfo() external view returns (uint8 assetType, address assetAddress, uint8 assetDecimals)",
-  "function getTokensIn() external view returns (address[] memory)",
-  "function getTokensOut() external view returns (address[] memory)",
   "function getRewardTokens() external view returns (address[] memory)",
   "function accruedRewards(address user) external view returns (uint256[] memory)",
 ];
 
-// Remove USD0++ Token ABI
+// USD0++ Token ABI with only used functions
 const USD0_TOKEN_ABI = [
-  // Standard ERC20 functions
   "function name() external view returns (string)",
   "function symbol() external view returns (string)",
   "function decimals() external view returns (uint8)",
-  "function totalSupply() external view returns (uint256)",
-  "function balanceOf(address) external view returns (uint256)",
-  "function exchangeRate() external view returns (uint256)",
 ];
 
-// Add YT Token ABI
+// YT Token ABI with only used functions
 const YT_TOKEN_ABI = [
-  "function pyIndexCurrent() external returns (uint256)",
   "function pyIndexStored() external view returns (uint256)",
-  "function pyIndexLastUpdatedBlock() external view returns (uint128)",
 ];
 
 interface MarketState {
@@ -84,16 +65,6 @@ interface MarketDetails {
   rewardTokens: string[];
   creationBlock?: number;
   creationTimestamp?: number;
-  rates?: {
-    timestamp: number;
-    lnImpliedRate: string;
-  }[];
-  exchangeRates?: {
-    current: string;
-  };
-  ytIndex?: {
-    current: string;
-  };
   syRewards?: {
     tokens: string[];
     rates: string[];
@@ -122,7 +93,7 @@ async function getMarketDetails(
     tokens._YT,
   ];
 
-  // Get token symbols and current exchange rate
+  // Create contract instances
   const [syContract, ptContract, ytContract] = [
     syAddress,
     ptAddress,
@@ -139,15 +110,9 @@ async function getMarketDetails(
     YT_TOKEN_ABI,
     provider,
   );
+  const usd0Contract = new ethers.Contract(syAddress, USD0_TOKEN_ABI, provider);
 
-  // Create USD0++ contract instance
-  const usd0Contract = new ethers.Contract(
-    syAddress, // The SY token is USD0++
-    USD0_TOKEN_ABI,
-    provider,
-  );
-
-  // Get basic token info first
+  // Get basic token info
   const [sySymbol, ptSymbol, ytSymbol, currentExchangeRate, currentYtIndex] =
     await Promise.all([
       syContract.symbol(),
@@ -157,7 +122,7 @@ async function getMarketDetails(
       ytTokenContract.pyIndexStored(),
     ]);
 
-  // Try to get USD0++ token info first
+  // Get USD0++ token info
   try {
     const [name, symbol, decimals] = await Promise.all([
       usd0Contract.name(),
@@ -175,13 +140,7 @@ async function getMarketDetails(
     );
   }
 
-  // Remove the historical rates fetching code
-  const rates: Array<{
-    timestamp: number;
-    lnImpliedRate: string;
-  }> = [];
-
-  // Try to get creation block and its timestamp
+  // Get creation block and timestamp
   let creationBlock;
   let creationTimestamp;
   try {
@@ -208,17 +167,13 @@ async function getMarketDetails(
   let syRewardRates: string[] = [];
   let syRewardSymbols: string[] = [];
   try {
-    // Get reward tokens from SY
     syRewardTokens = await syTokenContract.getRewardTokens();
-
-    // Get reward rates by checking accrued rewards over a small time window
-    const testAddress = "0x0000000000000000000000000000000000000001"; // Dummy address for reward rate check
+    const testAddress = "0x0000000000000000000000000000000000000001";
     const rewardAmounts = await syTokenContract.accruedRewards(testAddress);
     syRewardRates = rewardAmounts.map((amount: ethers.BigNumberish) =>
       amount.toString(),
     );
 
-    // Get reward token symbols
     const rewardTokenContracts = syRewardTokens.map(
       (address) => new ethers.Contract(address, TOKEN_ABI, provider),
     );
@@ -260,13 +215,6 @@ async function getMarketDetails(
     rewardTokens,
     creationBlock,
     creationTimestamp,
-    rates,
-    exchangeRates: {
-      current: currentExchangeRate.toString(),
-    },
-    ytIndex: {
-      current: currentYtIndex.toString(),
-    },
     syRewards: {
       tokens: syRewardTokens,
       rates: syRewardRates,
@@ -308,7 +256,6 @@ async function formatMarketData(
   const calculateTimeRemaining = (expiry: number, now: number) => {
     const diff = expiry - now;
     if (diff <= 0) return "Expired";
-
     const days = Math.floor(diff / (24 * 60 * 60));
     return `${days} days`;
   };
@@ -340,7 +287,7 @@ async function formatMarketData(
     return yt.toString();
   };
 
-  // Calculate TVL in USD (total value of SY + PT + YT + LP)
+  // Calculate TVL in USD
   const calculateTvl = (
     totalSy: string,
     totalPt: string,
@@ -352,8 +299,6 @@ async function formatMarketData(
     const yt = BigInt(calculateYtBalance(totalPt, totalSy));
     const lp = BigInt(totalLp);
     const rate = BigInt(syExchangeRate);
-
-    // Total value is the sum of all tokens, each adjusted by the exchange rate
     const totalValue = ((sy + pt + yt + lp) * rate) / BigInt(1e18);
     return ethers.formatEther(totalValue);
   };
@@ -371,21 +316,14 @@ async function formatMarketData(
     return ((elapsed / total) * 100).toFixed(2) + "%";
   };
 
-  // Calculate YT yield rate from current rate
+  // Calculate YT yield rate
   const calculateYtYield = (lnImpliedRate: string) => {
     try {
-      // Calculate rate from ln rate
       const rateNumber = Number(ethers.formatEther(lnImpliedRate));
-
-      // If rate is invalid, return N/A
       if (isNaN(rateNumber) || !isFinite(rateNumber)) {
         return "N/A";
       }
-
-      // Calculate YT yield as the implied rate
       const ytYield = Math.exp(rateNumber) - 1;
-
-      // Return N/A if the result is not a reasonable number
       if (
         isNaN(ytYield) ||
         !isFinite(ytYield) ||
@@ -394,7 +332,6 @@ async function formatMarketData(
       ) {
         return "N/A";
       }
-
       return (ytYield * 100).toFixed(2) + "%";
     } catch (error) {
       console.warn("Error calculating YT yield:", error);
@@ -402,41 +339,32 @@ async function formatMarketData(
     }
   };
 
-  // Calculate reward APR
-  const calculateRewardApr = (rates: string[], symbols: string[]) => {
-    if (!rates.length) return "N/A";
-
+  // Calculate token prices
+  const calculateTokenPrices = (
+    syExchangeRate: string,
+    lastLnImpliedRate: string,
+  ) => {
     try {
-      // For now, we'll focus on the first reward token (usually the main one)
-      const ratePerSecond = Number(ethers.formatEther(rates[0]));
-
-      // Annualize the rate (seconds in a year)
-      const annualRate = ratePerSecond * 365 * 24 * 60 * 60;
-
-      if (
-        isNaN(annualRate) ||
-        !isFinite(annualRate) ||
-        annualRate < 0 ||
-        annualRate > 1000
-      ) {
-        return "N/A";
-      }
-
+      const rateNumber = Number(ethers.formatEther(lastLnImpliedRate));
+      const timeToExpiry =
+        (market.state.expiry - market.timestamp) / (365 * 24 * 60 * 60);
+      const discountFactor = Math.exp(-rateNumber * timeToExpiry);
+      const ptPrice = discountFactor;
+      const ytPrice = 1 - ptPrice;
       return {
-        total: annualRate.toFixed(2) + "%",
-        breakdown: symbols.map((symbol, i) => {
-          const rate =
-            Number(ethers.formatEther(rates[i])) * 365 * 24 * 60 * 60;
-          return `${symbol}: ${rate.toFixed(2)}%`;
-        }),
+        pt: `$${ptPrice.toFixed(4)}`,
+        yt: `$${ytPrice.toFixed(4)}`,
       };
     } catch (error) {
-      console.warn("Error calculating reward APR:", error);
-      return "N/A";
+      console.warn("Error calculating token prices:", error);
+      return {
+        pt: "N/A",
+        yt: "N/A",
+      };
     }
   };
 
-  // Get reward token symbols using the provided provider
+  // Get reward token symbols
   const rewardTokenSymbols = await Promise.all(
     market.rewardTokens.map(async (address) => {
       const contract = new ethers.Contract(address, TOKEN_ABI, provider);
@@ -460,36 +388,10 @@ async function formatMarketData(
     market.state.totalSy,
   );
 
-  // Calculate YT and PT prices in USD
-  const calculateTokenPrices = (
-    syExchangeRate: string,
-    lastLnImpliedRate: string,
-  ) => {
-    try {
-      // Get the PT price from the implied rate (discount factor)
-      const rateNumber = Number(ethers.formatEther(lastLnImpliedRate));
-      const timeToExpiry =
-        (market.state.expiry - market.timestamp) / (365 * 24 * 60 * 60); // in years
-      const discountFactor = Math.exp(-rateNumber * timeToExpiry);
-
-      // PT price = discountFactor (since PT will be worth 1 at expiry)
-      const ptPrice = discountFactor;
-
-      // YT price = 1 - PT price (since YT + PT = 1 at expiry)
-      const ytPrice = 1 - ptPrice;
-
-      return {
-        pt: `$${ptPrice.toFixed(4)}`,
-        yt: `$${ytPrice.toFixed(4)}`,
-      };
-    } catch (error) {
-      console.warn("Error calculating token prices:", error);
-      return {
-        pt: "N/A",
-        yt: "N/A",
-      };
-    }
-  };
+  const tokenPrices = calculateTokenPrices(
+    market.syExchangeRate,
+    market.state.lastLnImpliedRate,
+  );
 
   return {
     address: market.address,
@@ -529,14 +431,8 @@ async function formatMarketData(
         market.state.reserveFeePercent,
       ),
       ytYieldRate: calculateYtYield(market.state.lastLnImpliedRate),
-      ytPrice: calculateTokenPrices(
-        market.syExchangeRate,
-        market.state.lastLnImpliedRate,
-      ).yt,
-      ptPrice: calculateTokenPrices(
-        market.syExchangeRate,
-        market.state.lastLnImpliedRate,
-      ).pt,
+      ytPrice: tokenPrices.yt,
+      ptPrice: tokenPrices.pt,
       utilizationRate: calculateUtilization(
         market.state.totalPt,
         market.state.totalSy,
@@ -621,7 +517,7 @@ async function main() {
   console.log(`TVL: ${formattedData.metrics.tvl}`);
   console.log(`YT Price: ${formattedData.metrics.ytPrice}`);
   console.log(`PT Price: ${formattedData.metrics.ptPrice}`);
-  console.log(`YT Yield Rate (7d avg): ${formattedData.metrics.ytYieldRate}`);
+  console.log(`YT Yield Rate: ${formattedData.metrics.ytYieldRate}`);
   console.log(`Implied APY: ${formattedData.metrics.impliedApy}`);
   console.log(`Fee-Adjusted APY: ${formattedData.metrics.feeAdjustedApy}`);
   console.log(`Utilization Rate: ${formattedData.metrics.utilizationRate}`);
